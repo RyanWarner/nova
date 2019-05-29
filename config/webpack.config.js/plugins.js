@@ -11,7 +11,8 @@ const shared = []
 const client = [
   new CaseSensitivePathsPlugin(),
   new HtmlWebpackPlugin({
-    template: `${paths.src}/index.html`,
+    template: `${paths.src}/index.ejs`,
+    filename: 'index.html'
   }),
   new Dotenv({
     path: `${paths.dotenv}.${deployEnv}`
