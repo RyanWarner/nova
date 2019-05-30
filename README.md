@@ -11,7 +11,7 @@ All important tasks are executed using NPM scripts. Checkout `package.json` for 
 
 ### `npm run start`
 
-Builds the app in development mode (using Webpack) and starts a local dev server. Keeps Webpack running in watchmode and updates the app automatically using HMR. Starts nodemon with the `--inspect` flag, allowing developers to debug the server logs using the Chrome Dev Tools (Navigate Chrome to `chrome://inspect/#devices`).
+Builds the app in development mode (using Webpack) and starts a local dev server at localhost:8080.
 
 ### `npm run deploy`
 
