@@ -1,13 +1,15 @@
-const util = require('util');
+const paths = require('../config/paths')
+require('dotenv').config({ path: `${paths.dotenv}.${process.env.DEPLOY_ENV}` })
+const util = require('util')
 const exec = util.promisify(require('child_process').exec)
+const chalk = require('chalk')
 
-const AWS_PROFILE = 'aws-profile'
-const AWS_REGION = 'us-west-2'
-const S3_BUCKET = 's3-bucket-name'
+const AWS_PROFILE = process.env.AWS_PROFILE
+const S3_BUCKET = process.env.S3_BUCKET
 
 const configureAws = async () => {
   console.log('Configuring AWS')
-  const { stdout, stderr } = await exec(`aws configure set region ${AWS_REGION} --profile ${AWS_PROFILE}`)
+  const { stdout, stderr } = await exec(`aws configure set region us-west-2 --profile ${AWS_PROFILE}`)
   if (stdout) console.log('stdout', stdout)
   if (stderr) console.log('stderr', stderr)
 }
@@ -27,6 +29,9 @@ const uploadIndex = async () => {
 }
 
 const deploy = async () => {
+  const message = `Deploying to: ${process.env.DEPLOY_ENV}`
+  const color = '#3D87C9'
+  console.log(chalk.hex(color).bold(message))
   await configureAws()
   await uploadDist()
   await uploadIndex()

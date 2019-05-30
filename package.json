@@ -6,8 +6,8 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "deploy:production": "npm run build:production",
-    "deploy:staging": "npm run build:staging && node scripts/deploy.js",
+    "deploy:production": "npm run build:production && cross-env DEPLOY_ENV=production node scripts/deploy.js",
+    "deploy:staging": "npm run build:staging && cross-env DEPLOY_ENV=staging node scripts/deploy.js",
     "build:production": "cross-env NODE_ENV=production DEPLOY_ENV=production node scripts/build.js",
     "build:staging": "cross-env NODE_ENV=production node scripts/build.js",
     "build:with-stats": "cross-env NODE_ENV=production webpack --config config/webpack.config.js/client.prod.js --json > build/client/static/bundle-stats.json",
