@@ -20,17 +20,17 @@ module.exports = function (plop) {
       if (!answers.styledComponents) {
         actions.push({
           type: 'add',
-          path: './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.js',
+          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.js',
           templateFile: './config/plop/component/component.js.plop'
         })
       } else {
         actions.push({
           type: 'add',
-          path: './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.js',
+          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.js',
           templateFile: './config/plop/component/component.styled.js.plop'
         }, {
           type: 'add',
-          path: './src/shared/components/{{properCase componentName}}/styles.js',
+          path: './src/components/{{properCase componentName}}/styles.js',
           templateFile: './config/plop/component/styles.js.plop'
         })
       }
