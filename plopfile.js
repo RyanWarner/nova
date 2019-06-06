@@ -1,4 +1,18 @@
+const paths =  require('./config/paths')
+const fs = require('fs')
+
 module.exports = function (plop) {
+  plop.setActionType('addToIndex', (answers) => {
+    return new Promise((resolve, reject) => {
+      const exportString = `export ${answers.componentName} from './${answers.componentName}/${answers.componentName}'`
+
+      fs.appendFile(`${paths.components}/index.js`, exportString, err => {
+        if (err) throw reject('Failed to export component from components/index')
+        resolve('Added export to components/index')
+      })
+    })
+  })
+
   plop.setGenerator('React Component', {
     description: 'Create a React component',
     prompts: [
@@ -20,18 +34,20 @@ module.exports = function (plop) {
       if (!answers.styledComponents) {
         actions.push({
           type: 'add',
-          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.js',
+          path: `${paths.components}/{{properCase componentName}}/{{properCase componentName}}.js`,
           templateFile: './config/plop/component/component.js.plop'
         })
       } else {
         actions.push({
           type: 'add',
-          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.js',
+          path: `${paths.components}/{{properCase componentName}}/{{properCase componentName}}.js`,
           templateFile: './config/plop/component/component.styled.js.plop'
         }, {
           type: 'add',
-          path: './src/components/{{properCase componentName}}/styles.js',
+          path: `${paths.components}/{{properCase componentName}}/styles.js`,
           templateFile: './config/plop/component/styles.js.plop'
+        }, {
+          type: 'addToIndex'
         })
       }
 
