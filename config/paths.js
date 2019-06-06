@@ -9,6 +9,7 @@ const paths = {
   clientBuild: resolveApp('dist/'),
   dotenv: resolveApp('config/.env'),
   src: resolveApp('src'),
+  components: resolveApp('src/components'),
   nodeModules: resolveApp('node_modules'),
   publicPath: '/dist/',
   cdn
