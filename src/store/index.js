@@ -1,6 +1,8 @@
 import thunk from 'redux-thunk'
 import { createStore, applyMiddleware, compose } from 'redux'
+
 import rootReducer from './rootReducer'
+import apiMiddleware from 'app/api/apiMiddleware'
 
 export const configureStore = ({ initialState, middleware = [] } = {}) => {
   const devtools =
@@ -20,7 +22,7 @@ export const configureStore = ({ initialState, middleware = [] } = {}) => {
       collapsed: true,
       diff: true
     })
-    finalMiddleware = applyMiddleware(...[thunk].concat(...middleware).concat(logger))
+    finalMiddleware = applyMiddleware(...[thunk].concat(...middleware).concat(apiMiddleware).concat(logger))
   }
 
   const store = createStore(
