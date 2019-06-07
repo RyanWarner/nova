@@ -11,6 +11,7 @@ module.exports = {
     'app/components': `${paths.src}/components`,
     'app/assets': `${paths.src}/assets`,
     'app/store': `${paths.src}/store`,
-    'app/data': `${paths.src}/data`
+    'app/data': `${paths.src}/data`,
+    'app/api': `${paths.src}/api`
   }
 }
