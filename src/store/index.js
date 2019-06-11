@@ -15,7 +15,7 @@ export const configureStore = ({ initialState, middleware = [] } = {}) => {
   let finalMiddleware
   const isProd = process.env.NODE_ENV === 'production'
   if (isProd) {
-    finalMiddleware = applyMiddleware(...[thunk].concat(...middleware))
+    finalMiddleware = applyMiddleware(...[thunk].concat(...middleware).concat(apiMiddleware))
   } else {
     const createLogger = require('redux-logger').createLogger
     const logger = createLogger({
