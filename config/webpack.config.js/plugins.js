@@ -21,8 +21,7 @@ const client = [
     __SERVER__: 'false',
     __BROWSER__: 'true'
   }),
-  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-  new webpack.HotModuleReplacementPlugin()
+  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ]
 
 module.exports = {
