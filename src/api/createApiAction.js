@@ -2,7 +2,7 @@ import { loadState } from 'app/store/localStorage'
 
 export const CALL_API = Symbol('Call API')
 export default ({ method, url, payload, prefix, storeKey, authorized, data }) => {
-  let headers = {
+  const headers = {
     'Content-Type': 'application/json'
   }
   if (authorized) {

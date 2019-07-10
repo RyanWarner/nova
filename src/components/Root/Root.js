@@ -18,6 +18,7 @@ export default class Root extends Component {
       window.scrollTo(0, 0)
     }
   }
+
   render () {
     const { location } = this.props
     const activeRoute = this.props.route.routes.find(route => matchPath(location.pathname, route))
@@ -43,9 +44,9 @@ export default class Root extends Component {
           { name: 'twitter:image', content: ogImageUrl }
         ]}
         link={[
-          { 'rel': 'icon',
-            'type': 'image/png',
-            'href': favicon
+          { rel: 'icon',
+            type: 'image/png',
+            href: favicon
           }
         ]}
       />
