@@ -10,7 +10,7 @@ module.exports = {
   name: 'client',
   target: 'web',
   entry: {
-    bundle: [require.resolve('@babel/polyfill'), `${paths.src}/index.js`]
+    bundle: [`${paths.src}/index.js`]
   },
   output: {
     path: paths.clientBuild,
