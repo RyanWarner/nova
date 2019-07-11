@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
-import { Logo } from 'app/ui-kit/Icons'
+import { Colors, Animations } from 'app/styles'
 
-export const HomeComponent = styled.div`
+export const HomePage = styled.div`
+  animation: ${Animations.FadeIn} 1250ms forwards;
+  animation-delay: 250ms;
+  opacity: 0;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  background: ${Colors.black};
+  color: ${Colors.white};
 `
-
-export const StyledLogo = styled(Logo)`
-  margin-bottom: 20px;
-`
-export const LogoText = styled.div``

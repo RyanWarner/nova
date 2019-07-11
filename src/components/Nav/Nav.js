@@ -1,35 +1,21 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
 
 import * as S from './styles'
-import { navItems } from 'app/data'
-import Analytics from 'app/analytics'
 
-@withRouter
+const githubLink = 'https://github.com/yawnch/react-firebase-ssr-starter'
+
 export default class Nav extends Component {
-  desktopNavItemClick = (path) => {
-    Analytics.event({
-      eventType: 'NAV ITEM CLICK',
-      pathname: this.props.location.pathname
-    })
-  }
-
   render () {
-    const { theme } = this.props
-
-    return <S.NavComponent theme={theme}>
-      <S.MaxWidth>
-        <S.LogoLink to='/'>logo</S.LogoLink>
-        <S.NavItems>
-          { Object.values(navItems).map((item, index) => <S.NavItem
-            theme={theme} to={item.url} key={index}
-            onClick={() => { this.desktopNavItemClick(item.url) }}
-          >
-            {item.display}
-          </S.NavItem>
-          )}
-        </S.NavItems>
-      </S.MaxWidth>
+    return <S.NavComponent>
+      <S.LogoLink to='/'>
+        <S.StyledYawnchLogo />
+        <S.LogoText>Yawnch</S.LogoText>
+      </S.LogoLink>
+      <S.NavItems>
+        <S.NavA href={githubLink} target='_blank'>Github</S.NavA>
+        <S.NavA href={githubLink} target='_blank'>Slack</S.NavA>
+        <S.NavLink to='/admin'>Admin</S.NavLink>
+      </S.NavItems>
     </S.NavComponent>
   }
 }

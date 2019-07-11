@@ -1,59 +1,57 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Colors, Sizes, Breakpoints, Type } from 'app/styles'
-import { Logo } from 'app/ui-kit/Icons'
+
+import { Colors, Shadows, Breakpoints, Sizes } from 'app/styles'
+import { YawnchLogo } from 'app/ui-kit/Icons'
 
 export const NavComponent = styled.div`
-  background-color: transparent;
-  width: 100%;
+  height: ${Sizes.navHeight};
+  background-color: ${Colors.black};
+  box-shadow: ${Shadows.main};
+  width: 100vw;
   display: flex;
-  justify-content: center;
-  padding: 43px 56px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 ${Sizes.xAppPadding};
   box-sizing: border-box;
-  z-index: 3;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
   @media(max-width: ${Breakpoints.main}) {
     padding: 0 20px;
     height: 60px;
   }
-
-  ${props => props.theme === 'whiteBg' && css`
-    background-color: ${Colors.white};
-  `}
-
-  @media(max-width: ${Breakpoints.main}) {
-    display: none;
-  }
 `
 
-export const LogoLink = styled(Link)``
+export const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+`
+
+export const LogoText = styled.div`
+  margin-left: 10px;
+  font-weight: bold;
+`
+
+export const StyledYawnchLogo = styled(YawnchLogo)`
+  height: 36px;
+  width: 20px;
+`
 
 export const NavItems = styled.div`
   display: flex;
 `
-export const NavItem = styled(Link)`
-  margin-right: 48px;
-  cursor: pointer;
-  transition: all .2s ease-out;
-  display: flex;
-  align-items: center;
-  color: ${props => props.theme.desktop.navColor};
-  ${Type.navItem};
 
-  &:hover {
-    color: ${props => props.theme.desktop.navHoverColor};
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
+const navItemShared = css`
+  margin-left: 26px;
 `
 
-export const MaxWidth = styled.div`
-  max-width: ${Sizes.maxWidth};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
+export const NavA = styled.a`
+  ${navItemShared};
+`
+
+export const NavLink = styled(Link)`
+  ${navItemShared};
 `

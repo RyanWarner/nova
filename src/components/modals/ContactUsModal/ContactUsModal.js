@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import * as S from './styles'
 import FIELDS from './fields'
 import withForm from '../../withForm'
-import Analytics from 'app/analytics'
+import analytics from 'app/analytics'
 import { withRouter } from 'react-router-dom'
 
 @withRouter
@@ -26,7 +26,7 @@ export default class ContactUsModal extends Component {
       //   name: name.value
       // })
 
-      Analytics.event({
+      analytics.event({
         eventType: 'SUBMIT CONTACT FORM',
         pathname,
         props: {

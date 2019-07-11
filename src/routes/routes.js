@@ -1,12 +1,5 @@
-import Root from '../components/Root/Root'
-import Home from '../pages/Home'
-import NotFound from '../components/NotFound/NotFound'
-
-import navThemes from './navThemes'
-
-// Navigation is themeable for both mobile and desktop
-// see navThemes.js to customize themes,
-// and set them on each route with navTheme: navThemes.myTheme
+import { Root } from 'app/components'
+import { Home, NotFound } from 'app/pages'
 
 export default [{
   component: Root,
@@ -14,18 +7,16 @@ export default [{
     path: '/',
     exact: true,
     component: Home,
-    navTheme: navThemes.home,
     meta: {
       title: 'Home',
-      description: 'React Sprout v2'
+      description: 'React Starter by Yawnch'
     }
   }, {
     path: '*',
     component: NotFound,
-    navTheme: navThemes.notFound,
     meta: {
       title: 'Not found',
-      description: '404'
+      description: '404 - Not Found'
     }
   }]
 }]
