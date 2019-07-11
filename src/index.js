@@ -9,7 +9,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 
 import routes from './routes/routes'
 import Analytics from './Analytics'
-import { loadState, saveState } from './cookieService'
+import { loadState, saveState } from 'app/store/localStorage'
 import { ScrollToTop } from 'app/ui-kit'
 
 Analytics.initialize()
