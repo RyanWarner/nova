@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Colors, Sizes, Breakpoints, Type } from 'app/styles'
-import { Logo } from 'app/ui-kit/Icons'
 
 export const NavComponent = styled.div`
   background-color: transparent;

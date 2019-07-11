@@ -1,6 +1,5 @@
-import Root from '../components/Root/Root'
-import Home from '../pages/Home'
-import NotFound from '../components/NotFound/NotFound'
+import { Root } from 'app/components'
+import { Home, NotFound } from 'app/pages'
 
 export default [{
   component: Root,
