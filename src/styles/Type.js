@@ -1,140 +1,49 @@
 import { css, createGlobalStyle } from 'styled-components'
 
-import { Colors, Breakpoints } from 'app/styles'
+import { Breakpoints, Colors } from 'app/styles'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
+export const fontFace = `'Manrope', ${sansSerifFallback}`
 
-export const fontFace = `'Cabin', ${sansSerifFallback}`
-
-export const bigBody = css`
-  font-size: 36px;
-  font-weight: 200;
-  line-height: normal;
-`
+export const fontWeights = {
+  regular: 400,
+  bold: 'bold'
+}
 
 export const body = css`
-  font-size: 15px;
-  line-height: 22px;
-
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 13px;
-    line-height: normal;
-  }
-`
-
-export const bodyMedium = css`
-  ${body};
-  font-weight: 600;
+  font-size: 14px;
 `
 
 export const smallBody = css`
-  font-size: 18px;
-  line-height: 24px;
-
-  @media(max-width: ${Breakpoints.main}){
-    font-size: 14px;
-    line-height: 20px;
-  }
+  font-size: 14px;
+  line-height: 28px;
 `
 
-export const navItem = css`
-  font-size: 18px;
-  font-weight: bold;
-`
-
-export const input = css`
+export const largeInput = css`
   font-size: 24px;
-  line-height: 36px;
-  font-weight: 200;
-
-  @media(max-width: ${Breakpoints.main}){
-    font-size: 18px;
-    line-height: 26px;
-  }
-`
-
-export const label = css`
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 600;
-
-  @media(max-width: ${Breakpoints.main}){
-    font-size: 16px;
-    line-height: 20px;
-  }
-`
-
-export const pillButton = css`
-  font-size: 18px;
-  font-weight: 500;
 `
 
 export const header1 = css`
-  font-size: 80px;
-  line-height: 85px;
-  font-weight: bold;
-  margin: 0;
+  font-size: 24px;
+  line-height: 152%;
+  font-weight: ${fontWeights.bold};
+  margin: 0 0 30px 0;
 
   @media(max-width: ${Breakpoints.main}) {
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 18px;
   }
 `
 export const header2 = css`
-  font-size: 64px;
-  line-height: 69px;
-  font-weight: bold;
-  margin: 0;
-
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 32px;
-    line-height: 40px;
-  }
+  font-size: 20px;
+  line-height: 152%;
+  font-weight: ${fontWeights.bold};
+  margin: 0 0 20px 0;
 `
 export const header3 = css`
-  font-size: 42px;
-  font-weight: bold;
-  line-height: 48px;
-  margin: 0;
-
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 24px;
-    line-height: 30px;
-  }
-`
-export const header3Italic = css`
-  font-size: 42px;
-  font-weight: bold;
-  font-style: italic;
-  line-height: normal;
-  margin: 0;
-
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 24px;
-    line-height: 30px;
-  }
-`
-export const header4 = css`
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 36px;
-  margin: 0;
-
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 20px;
-    line-height: normal;
-  }
-`
-export const header5 = css`
-  font-size: 24px;
-  font-weight: bold;
-  line-height: normal;
-  margin: 0;
-
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 16px;
-    line-height: 20px;
-  }
+  font-size: 16px;
+  line-height: 152%;
+  font-weight: ${fontWeights.bold};
+  margin: 0 0 20px 0;
 `
 
 export const GlobalStyle = createGlobalStyle`
@@ -147,21 +56,15 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     ${header3};
   }
-  h4 {
-    ${header4};
-  }
-  h5 {
-    ${header5};
-  }
   p {
     ${smallBody};
     margin-top: 0;
     margin-bottom: 38px;
   }
   a {
-    color: ${Colors.brand};
+    color: ${Colors.white};
     text-decoration: none;
-    transition: color .3s ease;
+    transition: color 300ms ease;
 
     &:hover {
       color: ${Colors.brand};

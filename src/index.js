@@ -5,7 +5,6 @@ import { ConnectedRouter as Router, routerMiddleware } from 'connected-react-rou
 import { configureStore } from './store'
 import createHistory from './store/history'
 import { renderRoutes } from 'react-router-config'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 import routes from './routes/routes'
 import analytics from './analytics'
@@ -42,9 +41,7 @@ render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <ScrollToTop>
-        <ParallaxProvider>
-          { renderRoutes(routes) }
-        </ParallaxProvider>
+        { renderRoutes(routes) }
       </ScrollToTop>
     </Router>
   </Provider>,
