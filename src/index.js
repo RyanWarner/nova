@@ -8,11 +8,11 @@ import { renderRoutes } from 'react-router-config'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import routes from './routes/routes'
-import Analytics from './Analytics'
+import analytics from './analytics'
 import { loadState, saveState } from 'app/store/localStorage'
 import { ScrollToTop } from 'app/ui-kit'
 
-Analytics.initialize()
+analytics.initialize()
 
 const browserHistory = createHistory()
 
@@ -31,11 +31,11 @@ store.subscribe(() => {
   saveState(state)
 })
 
-Analytics.pageview({ pathname: browserHistory.location.pathname })
+analytics.pageview({ pathname: browserHistory.location.pathname })
 
 const unlisten = browserHistory.listen((location, action) => { // eslint-disable-line no-unused-vars
   const { pathname } = location
-  Analytics.pageview({ pathname })
+  analytics.pageview({ pathname })
 })
 
 render(

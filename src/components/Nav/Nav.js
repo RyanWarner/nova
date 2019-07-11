@@ -3,12 +3,12 @@ import { withRouter } from 'react-router-dom'
 
 import * as S from './styles'
 import { navItems } from 'app/data'
-import Analytics from 'app/analytics'
+import analytics from 'app/analytics'
 
 @withRouter
 export default class Nav extends Component {
   desktopNavItemClick = (path) => {
-    Analytics.event({
+    analytics.event({
       eventType: 'NAV ITEM CLICK',
       pathname: this.props.location.pathname
     })
