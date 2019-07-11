@@ -2,6 +2,7 @@ const amplitudeApiKey = process.env.AMPLITUDE_API_KEY
 
 export default class Analytics {
   static initialize = () => {
+    if (!amplitudeApiKey) return
     if (typeof window !== 'undefined') {
       const amplitude = require('amplitude-js')
       this.Amplitude = amplitude.getInstance()
@@ -10,6 +11,7 @@ export default class Analytics {
   }
 
   static pageview = ({ pathname, props }) => {
+    if (this.Amplitude == null) return
     const timestamp = Date.now()
     const eventProps = {
       pathname,
@@ -20,6 +22,7 @@ export default class Analytics {
   }
 
   static event = ({ eventType, pathname, props }) => {
+    if (this.Amplitude == null) return
     const timestamp = Date.now()
     const eventProps = {
       pathname,
