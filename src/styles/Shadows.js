@@ -1,1 +1,3 @@
-export const main = `0px 8px 144px rgba(0, 0, 0, .1)`
+import { Colors } from 'app/styles'
+
+export const main = `0px 2px 6px ${Colors.black012}`
