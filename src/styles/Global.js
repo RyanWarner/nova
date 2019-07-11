@@ -1,17 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { Colors, Type, Shadows } from 'app/styles'
+import { Colors, Type } from 'app/styles'
 
 export const GlobalStyle = createGlobalStyle`
-  .tippy-tooltip.light-theme {
-    background-color: ${Colors.background};
-    color: ${Colors.fontPrimary};
-    padding: 0;
-    text-align: left;
-    box-shadow: ${Shadows.main};
-    overflow: hidden;
-  }
-
   html, body {
     min-height: 100vh;
     ${Type.body};
@@ -20,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: ${Colors.background};
+    background-color: ${Colors.black};
     color: ${Colors.fontPrimary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -35,6 +26,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    height: 100%;
+    min-height: 100%;
   }
 `

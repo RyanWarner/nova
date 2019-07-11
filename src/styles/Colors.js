@@ -1,6 +1,10 @@
-export const brand = '#A5C386'
-export const brandSecondary = '#40463A'
+export const brand = '#E5A840'
 
-export const background = '#181818'
+export const black = '#1F2021'
+export const white = '#F8F8F8'
+export const transparent = 'transparent'
 
-export const fontPrimary = '#F9F7EF'
+export const black012 = 'rgba(0, 0, 0, 0.12)'
+
+export const darkGray = '#101111'
+export const adminNavBorder = 'rgba(255, 255, 255, 0.18)'
