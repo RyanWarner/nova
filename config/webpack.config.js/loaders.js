@@ -6,7 +6,7 @@ const babelLoader = {
   loader: 'babel-loader'
 }
 
-const ASSET_PATH = process.env.NODE_ENV === 'production' ? `${paths.cdn}build` : paths.publicPath
+const ASSET_PATH = process.env.NODE_ENV === 'production' ? paths.cdn : paths.publicPath
 
 const urlLoaderConfig = (emitFile) => ({
   loader: require.resolve('url-loader'),
