@@ -17,7 +17,7 @@ export const CloseX = styled(X)`
 `
 
 export const GlobalModalStyle = createGlobalStyle`
-  .Aria-dialog {
+  .Aria-modal {
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
