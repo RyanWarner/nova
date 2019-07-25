@@ -12,15 +12,15 @@
   "plugins": [
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     ["babel-plugin-styled-components", {
-      "fileName": false,
-      "ssr": true
+      "fileName": false
     }],
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-export-namespace-from",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-optional-chaining"
   ],
   "env": {
     "test": {

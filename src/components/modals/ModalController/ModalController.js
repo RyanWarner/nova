@@ -54,7 +54,7 @@ export default class ModalController extends Component {
       closeTimeoutMS: 250,
       underlayClass,
       titleText: 'my modal',
-      focusDialog: true, // TODO: fix auto focus
+      focusModal: true, // TODO: fix auto focus
       onEnter: this.onModalEnter
     }
 
