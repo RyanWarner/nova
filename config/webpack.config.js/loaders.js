@@ -34,8 +34,8 @@ const urlLoaderClient = {
   use: [urlLoaderConfig(true), imageLoaderConfig]
 }
 const cssLoaderClient = {
-    test: /\.css$/,
-    use: ['style-loader', 'css-loader']
+  test: /\.css$/,
+  use: ['style-loader', 'css-loader']
 }
 
 const fileLoaderClient = {

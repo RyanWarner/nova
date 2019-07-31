@@ -11,7 +11,7 @@ const start = async () => {
   const host = '0.0.0.0'
 
   webpackConfig.watch = true
-  let options = {
+  const options = {
     stats: { colors: true },
     hot: true,
     historyApiFallback: true,
