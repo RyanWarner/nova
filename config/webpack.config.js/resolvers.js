@@ -5,6 +5,6 @@ module.exports = {
   modules: paths.resolveModules,
   alias: {
     'app/ui-kit': `${paths.src}/components/AppUIKit`,
-    'app': `${paths.src}`
+    app: `${paths.src}`
   }
 }
