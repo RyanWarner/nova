@@ -4,7 +4,7 @@ const resolvers = require('./resolvers')
 const plugins = require('./plugins')
 const TerserPlugin = require('terser-webpack-plugin')
 
-const publicPath = process.env.NODE_ENV === 'production' ? `${paths.cdn}` : paths.publicPath
+const publicPath = process.env.NODE_ENV === 'production' ? `${paths.cdn}/` : paths.publicPath
 
 module.exports = {
   name: 'client',
@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: paths.clientBuild,
     filename: 'bundle.js',
-    publicPath: publicPath,
+    publicPath,
     chunkFilename: '[name].[chunkhash:8].chunk.js'
   },
   module: {
