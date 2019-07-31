@@ -1,8 +1,8 @@
-const path = require('path')
 const paths = require('../paths')
 const { client: clientLoaders } = require('./loaders')
 const resolvers = require('./resolvers')
 const plugins = require('./plugins')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const publicPath = process.env.NODE_ENV === 'production' ? `${paths.cdn}` : paths.publicPath
 
@@ -41,7 +41,16 @@ module.exports = {
           chunks: 'all'
         }
       }
-    }
+    },
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false
+          }
+        }
+      })
+    ]
   },
   stats: {
     cached: false,
