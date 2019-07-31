@@ -13,7 +13,7 @@ All important tasks are executed using NPM scripts. Checkout `package.json` for 
 
 Builds the app in development mode (using Webpack) and starts a local dev server at localhost:8080.
 
-### `npm run deploy`
+### `npm run deploy:production`
 
 Creates a new production build and deploys it.
 
@@ -36,4 +36,4 @@ You can use plop to scaffold new components automatically.
 
 [Standard](https://standardjs.com/)
 
-Coding style is enforced using eslint. Eslint is run with the `--fix` option on each commit (via Husky pre-commit hooks). You can also manually run the linter using `npm run lint:fix`.
+Coding style is enforced using eslint. You can also manually run the linter using `npm run lint:fix`.
