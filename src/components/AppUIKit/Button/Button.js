@@ -12,12 +12,14 @@ export default class Button extends Component {
   render () {
     const { loading, children, size, type } = this.props
 
-    return <S.Button {...this.props}>
-      <S.ButtonText size={size} type={type}>
-        {loading
-          ? <Loading />
-          : children}
-      </S.ButtonText>
-    </S.Button>
+    return (
+      <S.Button {...this.props}>
+        <S.ButtonText size={size} type={type}>
+          {loading
+            ? <Loading />
+            : children}
+        </S.ButtonText>
+      </S.Button>
+    )
   }
 }

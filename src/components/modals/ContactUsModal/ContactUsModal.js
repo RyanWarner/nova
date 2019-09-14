@@ -43,14 +43,16 @@ export default class ContactUsModal extends Component {
 
   render () {
     const { loading } = this.state
-    return <S.ContactUsModalComponent>
-      <S.Title>Contact us</S.Title>
-      <S.TextFields>
-        {Object.values(FIELDS).map(this.props.renderInput)}
-        <S.SignUpButton onClick={this.submit} loading={loading}>
-          Send
-        </S.SignUpButton>
-      </S.TextFields>
-    </S.ContactUsModalComponent>
+    return (
+      <S.ContactUsModalComponent>
+        <S.Title>Contact us</S.Title>
+        <S.TextFields>
+          {Object.values(FIELDS).map(this.props.renderInput)}
+          <S.SignUpButton onClick={this.submit} loading={loading}>
+            Send
+          </S.SignUpButton>
+        </S.TextFields>
+      </S.ContactUsModalComponent>
+    )
   }
 }

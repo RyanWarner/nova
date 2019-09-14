@@ -63,15 +63,17 @@ export default class ModalController extends Component {
       return null
     }
 
-    return <S.OverlayWrap>
-      <S.GlobalModalStyle />
-      <AriaModal {...modalOptions} {...modalProps}>
-        {activeModal &&
-          <div className={modalClass}>
-            <S.CloseX onClick={this.onModalExit} />
-            <Modal closeModal={this.onModalExit} openModal={this.openModal} {...modalProps} setCloseFunc={this.setCloseFunc} />
-          </div>}
-      </AriaModal>
-    </S.OverlayWrap>
+    return (
+      <S.OverlayWrap>
+        <S.GlobalModalStyle />
+        <AriaModal {...modalOptions} {...modalProps}>
+          {activeModal &&
+            <div className={modalClass}>
+              <S.CloseX onClick={this.onModalExit} />
+              <Modal closeModal={this.onModalExit} openModal={this.openModal} {...modalProps} setCloseFunc={this.setCloseFunc} />
+            </div>}
+        </AriaModal>
+      </S.OverlayWrap>
+    )
   }
 }

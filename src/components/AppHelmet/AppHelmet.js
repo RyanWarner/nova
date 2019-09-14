@@ -22,20 +22,22 @@ export default class AppHelmet extends Component {
       return null
     }
 
-    return <Helmet
-      title={activeRoute.meta.title}
-      meta={[
-        { name: 'description', content: activeRoute.meta.description },
-        { property: 'og:description', content: activeRoute.meta.description },
-        { property: 'og:title', content: activeRoute.meta.title }
-      ]}
-      link={[
-        {
-          rel: 'icon',
-          type: 'image/png',
-          href: favicon
-        }
-      ]}
-    />
+    return (
+      <Helmet
+        title={activeRoute.meta.title}
+        meta={[
+          { name: 'description', content: activeRoute.meta.description },
+          { property: 'og:description', content: activeRoute.meta.description },
+          { property: 'og:title', content: activeRoute.meta.title }
+        ]}
+        link={[
+          {
+            rel: 'icon',
+            type: 'image/png',
+            href: favicon
+          }
+        ]}
+      />
+    )
   }
 }
