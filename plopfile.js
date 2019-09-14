@@ -1,57 +1,34 @@
 const paths = require('./config/paths')
 const fs = require('fs')
+const componentGenerator = require('./config/plop/component/component.generator')
+const pageGenerator = require('./config/plop/page/page.generator')
 
 module.exports = function (plop) {
-  plop.setActionType('addToIndex', (answers) => {
-    return new Promise((resolve, reject) => {
-      const exportString = `export ${answers.componentName} from './${answers.componentName}/${answers.componentName}'`
+  plop.setHelper('curlyWrap', t => `{${t}}`)
 
-      fs.appendFile(`${paths.components}/index.js`, exportString, err => {
-        if (err) throw reject('Failed to export component from components/index')
+  plop.setActionType('addComponentToIndex', (answers) => {
+    return new Promise((resolve, reject) => {
+      const exportString = `export ${answers.componentName} from './${answers.componentName}/${answers.componentName}'\n`
+
+      fs.appendFile(`${paths.srcShared}/components/index.js`, exportString, err => {
+        if (err) throw reject(new Error('Failed to export component from components/index'))
         resolve('Added export to components/index')
       })
     })
   })
 
-  plop.setGenerator('React Component', {
-    description: 'Create a React component',
-    prompts: [
-      {
-        type: 'prompt',
-        name: 'componentName',
-        message: 'Name of your component:'
-      },
-      {
-        type: 'confirm',
-        name: 'styledComponents',
-        message: 'Do you want the component to be styled with Styled Components?',
-        default: true
-      }
-    ],
-    actions: (answers) => {
-      const actions = []
+  plop.setActionType('addPageToIndex', (answers) => {
+    return new Promise((resolve, reject) => {
+      const exportString = `export ${answers.pageName} from './${answers.pageName}/${answers.pageName}'\n`
 
-      if (!answers.styledComponents) {
-        actions.push({
-          type: 'add',
-          path: `${paths.components}/{{properCase componentName}}/{{properCase componentName}}.js`,
-          templateFile: './config/plop/component/component.js.plop'
-        })
-      } else {
-        actions.push({
-          type: 'add',
-          path: `${paths.components}/{{properCase componentName}}/{{properCase componentName}}.js`,
-          templateFile: './config/plop/component/component.styled.js.plop'
-        }, {
-          type: 'add',
-          path: `${paths.components}/{{properCase componentName}}/styles.js`,
-          templateFile: './config/plop/component/styles.js.plop'
-        }, {
-          type: 'addToIndex'
-        })
-      }
-
-      return actions
-    }
+      fs.appendFile(`${paths.srcShared}/pages/index.js`, exportString, err => {
+        if (err) throw reject(new Error('Failed to export page from pages/index'))
+        resolve('Added export to pages/index')
+      })
+    })
   })
+
+  plop.setGenerator('Component', componentGenerator)
+
+  plop.setGenerator('Page', pageGenerator)
 }

@@ -10,6 +10,7 @@ const paths = {
   dotenv: resolveApp('config/.env'),
   src: resolveApp('src'),
   components: resolveApp('src/components'),
+  pages: resolveApp('src/pages'),
   nodeModules: resolveApp('node_modules'),
   publicPath: '/dist/',
   cdn
