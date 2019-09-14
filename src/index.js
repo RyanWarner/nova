@@ -41,7 +41,7 @@ render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <ScrollToTop>
-        { renderRoutes(routes) }
+        {renderRoutes(routes)}
       </ScrollToTop>
     </Router>
   </Provider>,

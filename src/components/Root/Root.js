@@ -15,7 +15,7 @@ export default class Root extends Component {
       <Global.GlobalStyle />
       <Type.GlobalStyle />
       <ModalController />
-      { renderRoutes(route.routes) }
+      {renderRoutes(route.routes)}
     </S.RootComponent>
   }
 }

@@ -7,7 +7,7 @@ export default class TextField extends Component {
     const { label, helperText } = this.props
 
     return <S.InputWrap>
-      { label && <S.Label>{label}</S.Label> }
+      {label && <S.Label>{label}</S.Label>}
       <S.TextInput {...this.props} />
       <S.Error>{helperText}</S.Error>
     </S.InputWrap>

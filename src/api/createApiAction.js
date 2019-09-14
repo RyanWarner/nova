@@ -6,7 +6,7 @@ export default ({ method, url, payload, prefix, storeKey, authorized, data }) =>
     'Content-Type': 'application/json'
   }
   if (authorized) {
-    headers['Authorization'] = `${loadState().api.auth.token}`
+    headers.Authorization = `${loadState().api.auth.token}`
   }
 
   const action = {

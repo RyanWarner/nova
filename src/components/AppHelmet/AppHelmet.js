@@ -30,7 +30,8 @@ export default class AppHelmet extends Component {
         { property: 'og:title', content: activeRoute.meta.title }
       ]}
       link={[
-        { rel: 'icon',
+        {
+          rel: 'icon',
           type: 'image/png',
           href: favicon
         }
