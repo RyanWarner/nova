@@ -17,11 +17,16 @@ Builds the app in development mode (using Webpack) and starts a local dev server
 
 Creates a new production build and deploys it.
 
+## Storybook
+
+`npm run storybook`
+
 ## Plop
 
 You can use plop to scaffold new components automatically.
 
-`npx plop`
+`npx plop Component`
+`npx plop Page`
 
 ## Notable Features
 - React
@@ -30,10 +35,11 @@ You can use plop to scaffold new components automatically.
 - Styled Components
 - Babel
 - Webpack
+- Storybook
 - Plop
 
 ## Coding Style
 
 [Standard](https://standardjs.com/)
 
-Coding style is enforced using eslint. You can also manually run the linter using `npm run lint:fix`.
+Coding style is enforced using ESLint. You can also manually run the linter using `npm run lint:fix`.
