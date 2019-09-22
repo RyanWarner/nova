@@ -4,7 +4,7 @@ import * as S from './styles'
 import FIELDS from './fields'
 import { withInformed } from 'app/components'
 
-@withInformed
+// @withInformed
 export default class ContactUsModal extends Component {
   state = { loading: false }
 
@@ -12,8 +12,7 @@ export default class ContactUsModal extends Component {
     this.props.setOnSubmit(this.submit)
   }
 
-  submit = async (event) => {
-    event.preventDefault()
+  submit = async () => {
     const { loading } = this.state
     if (loading) return
     this.setState({ loading: true })
