@@ -2,22 +2,21 @@ import React, { Component } from 'react'
 
 import * as S from './styles'
 import FIELDS from './fields'
-import withForm from '../../withForm'
-import analytics from 'app/analytics'
-import { withRouter } from 'react-router-dom'
+import { withInformed } from 'app/components'
 
-@withRouter
-@withForm(FIELDS)
+// @withInformed
 export default class ContactUsModal extends Component {
   state = { loading: false }
 
-  submit = async (event) => {
-    event.preventDefault()
+  componentDidMount = () => {
+    this.props.setOnSubmit(this.submit)
+  }
+
+  submit = async () => {
     const { loading } = this.state
-    if (loading || !this.props.allFieldsValid()) return
+    if (loading) return
     this.setState({ loading: true })
-    const { email, message, name, location } = this.props
-    const { pathname } = location
+    const { formState } = this.props
 
     try {
       // await ContactUs.create({
@@ -25,16 +24,6 @@ export default class ContactUsModal extends Component {
       //   message: message.value,
       //   name: name.value
       // })
-
-      analytics.event({
-        eventType: 'SUBMIT CONTACT FORM',
-        pathname,
-        props: {
-          email: email.value,
-          name: name.value,
-          message: message.value
-        }
-      })
       this.props.openModal('SuccessModal')
     } catch (error) {
       console.log('err', error)
@@ -43,12 +32,13 @@ export default class ContactUsModal extends Component {
 
   render () {
     const { loading } = this.state
+
     return (
       <S.ContactUsModalComponent>
         <S.Title>Contact us</S.Title>
         <S.TextFields>
-          {Object.values(FIELDS).map(this.props.renderInput)}
-          <S.SignUpButton onClick={this.submit} loading={loading}>
+
+          <S.SignUpButton loading={loading}>
             Send
           </S.SignUpButton>
         </S.TextFields>
