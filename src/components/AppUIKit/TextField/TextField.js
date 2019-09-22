@@ -1,15 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { asField } from 'informed'
 
 import * as S from './styles'
 
-export default class TextField extends Component {
-  render () {
-    const { label, helperText } = this.props
+export default asField((props) => {
+  const { label, noError, RightLabelComponent, ...rest } = props
+  const error = props.fieldState.error
 
-    return <S.InputWrap>
-      {label && <S.Label>{label}</S.Label>}
-      <S.TextInput {...this.props} />
-      <S.Error>{helperText}</S.Error>
-    </S.InputWrap>
-  }
-}
+  return (
+    <S.TextFieldComponent>
+      {label &&
+        <S.Labels>
+          <S.Label>{label}</S.Label>
+          {RightLabelComponent && <RightLabelComponent />}
+        </S.Labels>}
+      <S.TextInput {...rest} />
+      {!noError && <S.Error>{error}</S.Error>}
+    </S.TextFieldComponent>
+  )
+})

@@ -1,66 +1,41 @@
-import styled, { css } from 'styled-components'
+import React from 'react'
+import styled from 'styled-components'
+import { BasicText } from 'informed'
 
-import { Breakpoints, Colors, Type, Shadows } from 'app/styles'
+import { Colors, Type, Inputs } from 'app/styles'
 
-export const InputWrap = styled.div`
+export const TextFieldComponent = styled.div`
   flex-grow: 1;
   height: 100%;
-`
-
-const sharedInputStyles = css`
-  padding: 0 20px;
-  border-radius: 10px;
-  border: none;
-  box-sizing: border-box;
   width: 100%;
-  font-family: ${Type.fontFace};
-  height: 60px;
-  ${Type.input};
-  border: 1px solid ${Colors.inputBorder};
-
-  @media(max-width: ${Breakpoints.main}){
-    height: 50px;
-    padding: 0 14px;
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid ${Colors.blue};
-  }
-
-  ::placeholder {
-    color: ${Colors.lightGray};
-  }
+  margin-bottom: 16px;
 `
 
-export const TextInput = styled.input`
-  ${sharedInputStyles};
-  box-shadow: ${Shadows.main};
-  -webkit-appearance: none;
-  color: ${Colors.darkBlue};
+const BasicTextCleanProps = ({ noError, ...rest }) => (
+  <BasicText {...rest} />
+)
 
-  ${props => props.error && css`
-    border: 1px solid ${Colors.red};
-
-    &:focus {
-      border: 1px solid ${Colors.red};
-    }
-  `}
+export const TextInput = styled(BasicTextCleanProps)`
+  ${Inputs.base};
 `
 
 export const Error = styled.div`
-  ${Type.extraSmallBody};
+  ${Type.smallBody}
   color: ${Colors.error};
   position: relative;
   height: 20px;
-  margin: 4px 0 0 4px;
+  margin: 3px 0 0 3px;
+`
+
+export const Labels = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 6px 2px;
+  height: 20px;
 `
 
 export const Label = styled.div`
-  ${Type.label};
-  margin-bottom: 8px;
-  left: 2px;
+  ${Type.body}
   position: relative;
-  height: 20px;
-  color: ${Colors.darkBlue};
+  color: ${Colors.font10};
 `
