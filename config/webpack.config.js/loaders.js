@@ -31,7 +31,7 @@ const imageLoaderConfig = {
 
 const urlLoaderClient = {
   test: /\.(png|jpe?g|gif|svg|ttf|otf|eot|woff|woff2)$/,
-  use: [urlLoaderConfig(true), imageLoaderConfig]
+  use: [urlLoaderConfig(true)]
 }
 const cssLoaderClient = {
   test: /\.css$/,
@@ -40,12 +40,15 @@ const cssLoaderClient = {
 
 const fileLoaderClient = {
   exclude: [/\.(js|css|ejs|html|json)$/],
-  use: [{
-    loader: require.resolve('file-loader'),
-    options: {
-      name: 'assets/[name].[hash:8].[ext]'
-    }
-  }]
+  use: [
+    {
+      loader: require.resolve('file-loader'),
+      options: {
+        name: 'assets/[name].[hash:8].[ext]'
+      }
+    },
+    imageLoaderConfig
+  ]
 }
 
 const eslintLoader = {
@@ -54,7 +57,8 @@ const eslintLoader = {
   include: paths.src,
   use: [
     { loader: 'babel-loader' },
-    { loader: 'eslint-loader',
+    {
+      loader: 'eslint-loader',
       options: {
         emitWarning: true
         // fix: true
