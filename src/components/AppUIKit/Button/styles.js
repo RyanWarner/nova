@@ -1,8 +1,14 @@
+import React from 'react'
 import styled, { css } from 'styled-components'
 
-import { Colors, Breakpoints } from 'app/styles'
+import { Breakpoints, Colors, Type } from 'app/styles'
 
-export const Button = styled.div`
+const ButtonCleanProps = ({ loading, disabled, buttonName, options, ...rest }) => (
+  <button {...rest} />
+)
+
+export const Button = styled(ButtonCleanProps)`
+  font-family: ${Type.fontFace};
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -32,7 +38,7 @@ export const Button = styled.div`
     pointer-events: none;
   `}
 
-  ${props => props.secondary && css`
+  ${props => props.options.theme === 'secondary' && css`
     background: ${Colors.gray1};
     color: ${Colors.brand};
 
@@ -41,12 +47,12 @@ export const Button = styled.div`
     }
   `}
 
-  ${props => props.size === 'small' && css`
+  ${props => props.options.size === 'small' && css`
     height: 45px;
     min-width: auto;
   `}
 
-  @media(max-width: ${Breakpoints.main}){
+  @media(max-width: ${Breakpoints.main}) {
     height: 45px;
     min-width: auto;
   }
@@ -66,7 +72,7 @@ export const ButtonText = styled.div`
     font-size: 16px;
   `}
 
-  @media(max-width: ${Breakpoints.main}){
+  @media(max-width: ${Breakpoints.main}) {
     font-size: 16px;
   }
 `

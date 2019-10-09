@@ -6,11 +6,14 @@ import * as S from './styles'
 
 export default class Button extends Component {
   static propTypes = {
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    disabled: PropTypes.bool,
+    options: PropTypes.object
   }
 
   render () {
-    const { loading, children, size, type } = this.props
+    const { loading, children, options } = this.props
+    const { size, type } = options
 
     return (
       <S.Button {...this.props}>
