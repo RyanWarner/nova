@@ -16,9 +16,6 @@ export const Button = styled(ButtonCleanProps)`
   box-sizing: border-box;
   transition: background 275ms ease;
   height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: ${Colors.fontDark};
   background: ${Colors.brand};
   border-radius: 36px;
