@@ -13,11 +13,10 @@ export default class Button extends Component {
 
   render () {
     const { loading, children, options } = this.props
-    const { size, type } = options
 
     return (
       <S.Button {...this.props}>
-        <S.ButtonText size={size} type={type}>
+        <S.ButtonText option={options}>
           {loading
             ? <Loading />
             : children}

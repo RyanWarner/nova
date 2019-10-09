@@ -38,7 +38,7 @@ export const Button = styled(ButtonCleanProps)`
     pointer-events: none;
   `}
 
-  ${props => props.options.theme === 'secondary' && css`
+  ${props => props.options?.theme === 'secondary' && css`
     background: ${Colors.gray1};
     color: ${Colors.brand};
 
@@ -47,7 +47,7 @@ export const Button = styled(ButtonCleanProps)`
     }
   `}
 
-  ${props => props.options.size === 'small' && css`
+  ${props => props.options?.size === 'small' && css`
     height: 45px;
     min-width: auto;
   `}
@@ -68,7 +68,7 @@ export const ButtonText = styled.div`
   font-weight: bold;
   width: 100%;
 
-  ${props => props.size === 'small' && css`
+  ${props => props.options?.size === 'small' && css`
     font-size: 16px;
   `}
 
