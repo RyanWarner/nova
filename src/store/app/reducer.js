@@ -1,7 +1,7 @@
 
 // import { ActionTypes } from './actions'
 
-export const initialState = { topicsCarouselIndex: 0 }
+export const initialState = {}
 
 export default (state = initialState, action) => {
   const { type } = action

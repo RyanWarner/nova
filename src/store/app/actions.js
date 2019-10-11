@@ -3,7 +3,7 @@ export const ActionTypes = {
 }
 
 export const closeAllModals = () => ({ type: ActionTypes.SET_ACTIVE_MODAL, modal: null })
-export const openModal = ({ modalName, modalState }) => ({
+export const openModal = ({ name, modalState }) => ({
   type: ActionTypes.SET_ACTIVE_MODAL,
-  modal: { name: modalName, modalState }
+  modal: { name, modalState }
 })

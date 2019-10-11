@@ -2,7 +2,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import { X } from 'app/ui-kit/Icons'
 
-export const Wrap = styled.div``
 export const OverlayWrap = styled.div``
 export const CloseX = styled(X)`
   padding: 25px;
@@ -10,6 +9,9 @@ export const CloseX = styled(X)`
   position: absolute;
   top: 0%;
   cursor: pointer;
+  z-index: 2;
+  opacity: 0.5;
+  transition: opacity 200ms ease;
 
   &:hover {
     opacity: 0.7;

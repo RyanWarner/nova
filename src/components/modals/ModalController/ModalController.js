@@ -31,14 +31,15 @@ export default class ModalController extends Component {
     this.setState({ modalHasEntered: true })
   }
 
-  openModal = (modalName) => {
-    this.props.openModal({ modalName })
+  openModal = (name) => {
+    this.props.openModal({ name })
   }
 
   render () {
-    const { activeModal, modalProps } = this.props
+    const { activeModal } = this.props
     const { modalHasEntered } = this.state
     const modalName = activeModal?.name
+    const modalState = activeModal?.modalState
 
     let modalClass = 'Aria-modal'
     let underlayClass = 'Aria-underlay'
@@ -52,7 +53,7 @@ export default class ModalController extends Component {
       onExit: this.onModalExit,
       closeTimeoutMS: 250,
       underlayClass,
-      titleText: 'my modal',
+      titleText: modalName,
       focusModal: true, // TODO: fix auto focus
       onEnter: this.onModalEnter
     }
@@ -66,11 +67,16 @@ export default class ModalController extends Component {
     return (
       <S.OverlayWrap>
         <S.GlobalModalStyle />
-        <AriaModal {...modalOptions} {...modalProps}>
+        <AriaModal {...modalOptions} {...modalState}>
           {activeModal &&
             <div className={modalClass}>
-              <S.CloseX onClick={this.onModalExit} />
-              <Modal closeModal={this.onModalExit} openModal={this.openModal} {...modalProps} setCloseFunc={this.setCloseFunc} />
+              <S.CloseX onClick={this.closeModal} />
+              <Modal
+                closeModal={this.onModalExit}
+                openModal={this.openModal}
+                setCloseFunc={this.setCloseFunc}
+                {...modalState}
+              />
             </div>}
         </AriaModal>
       </S.OverlayWrap>
