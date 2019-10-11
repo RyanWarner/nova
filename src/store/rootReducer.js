@@ -2,12 +2,14 @@ import { combineReducers } from 'redux'
 import { connectRouter } from 'connected-react-router'
 import createHistory from './history'
 import app from './app/reducer'
+import loading from './loading/reducer'
 import { saveState } from 'app/store/localStorage'
 
 const history = createHistory()
 
 const appReducer = combineReducers({
   app,
+  loading,
   router: connectRouter(history)
 })
 
