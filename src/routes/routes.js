@@ -1,6 +1,6 @@
 import { Root, AppRoot } from 'app/components'
 import { Home, Faq, Privacy, Terms, NotFound } from 'app/pages'
-import adminRoutes from './adminRoutes'
+import adminRoutes from './admin.routes'
 
 export default [{
   component: Root,
