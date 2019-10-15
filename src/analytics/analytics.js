@@ -9,8 +9,8 @@ export const analyticsEventTypes = {
 
 export default class Analytics {
   static initialize = () => {
-    amplitude.initialize()
     google.initialize()
+    return amplitude.initialize()
   }
 
   static pageView = ({ pathname }) => {
