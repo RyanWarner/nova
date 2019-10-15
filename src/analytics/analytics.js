@@ -1,34 +1,29 @@
-const amplitudeApiKey = process.env.AMPLITUDE_API_KEY
+import amplitude from './amplitude'
+import google from './google'
 
-export default class analytics {
+export const analyticsEventTypes = {
+  pageView: 'page.view',
+  navClick: 'nav.click',
+  buttonClick: 'button.click'
+}
+
+export default class Analytics {
   static initialize = () => {
-    if (!amplitudeApiKey) return
-    if (typeof window !== 'undefined') {
-      const amplitude = require('amplitude-js')
-      this.Amplitude = amplitude.getInstance()
-      this.Amplitude.init(amplitudeApiKey, null, { includeReferrer: true, includeUtm: true })
-    }
+    amplitude.initialize()
+    google.initialize()
   }
 
-  static pageview = ({ pathname, props }) => {
-    if (this.Amplitude == null) return
-    const timestamp = Date.now()
-    const eventProps = {
-      pathname,
-      timestamp,
-      ...props
-    }
-    this.Amplitude.logEventWithTimestamp('PAGE VIEW', eventProps, timestamp)
+  static pageView = ({ pathname }) => {
+    amplitude.pageView({ pathname })
+    google.pageView({ pathname })
   }
 
-  static event = ({ eventType, pathname, props }) => {
-    if (this.Amplitude == null) return
-    const timestamp = Date.now()
-    const eventProps = {
-      pathname,
-      timestamp,
-      ...props
-    }
-    this.Amplitude.logEventWithTimestamp(eventType, eventProps, timestamp)
+  static event = (event) => {
+    amplitude.event(event)
+    google.event(event)
+  }
+
+  static setUserId = ({ userId }) => {
+    google.setUserId({ userId })
   }
 }
