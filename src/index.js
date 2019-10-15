@@ -11,8 +11,6 @@ import analytics from './analytics'
 import { loadState, saveState } from 'app/store/localStorage'
 import { ScrollToTop } from 'app/ui-kit'
 
-analytics.initialize()
-
 const browserHistory = createHistory()
 
 const persistedState = loadState()
@@ -30,11 +28,13 @@ store.subscribe(() => {
   saveState(state)
 })
 
-analytics.pageview({ pathname: browserHistory.location.pathname })
+analytics.initialize().then(() => {
+  analytics.pageView({ pathname: browserHistory.location.pathname })
+})
 
 const unlisten = browserHistory.listen((location, action) => { // eslint-disable-line no-unused-vars
   const { pathname } = location
-  analytics.pageview({ pathname })
+  analytics.pageView({ pathname })
 })
 
 render(

@@ -1,3 +1,1 @@
-import analytics from './analytics'
-
-export default analytics
+export default from './analytics'
