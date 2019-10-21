@@ -1,34 +1,14 @@
-const paths = require('./config/paths')
-const fs = require('fs')
 const componentGenerator = require('./config/plop/component/component.generator')
+const componentIndexAction = require('./config/plop/component/exportFromIndex')
 const pageGenerator = require('./config/plop/page/page.generator')
+const pageIndexAction = require('./config/plop/page/exportFromIndex')
 
 module.exports = function (plop) {
   plop.setHelper('curlyWrap', t => `{${t}}`)
 
-  plop.setActionType('addComponentToIndex', (answers) => {
-    return new Promise((resolve, reject) => {
-      const exportString = `export ${answers.componentName} from './${answers.componentName}/${answers.componentName}'\n`
-
-      fs.appendFile(`${paths.components}/index.js`, exportString, err => {
-        if (err) throw reject(new Error('Failed to export component from components/index'))
-        resolve('Added export to components/index')
-      })
-    })
-  })
-
-  plop.setActionType('addPageToIndex', (answers) => {
-    return new Promise((resolve, reject) => {
-      const exportString = `export ${answers.pageName} from './${answers.pageName}/${answers.pageName}'\n`
-
-      fs.appendFile(`${paths.pages}/index.js`, exportString, err => {
-        if (err) throw reject(new Error('Failed to export page from pages/index'))
-        resolve('Added export to pages/index')
-      })
-    })
-  })
+  plop.setActionType('addComponentToIndex', componentIndexAction)
+  plop.setActionType('addPageToIndex', pageIndexAction)
 
   plop.setGenerator('Component', componentGenerator)
-
   plop.setGenerator('Page', pageGenerator)
 }
