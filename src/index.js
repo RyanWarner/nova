@@ -5,11 +5,16 @@ import { ConnectedRouter as Router, routerMiddleware } from 'connected-react-rou
 import { configureStore } from './store'
 import createHistory from './store/history'
 import { renderRoutes } from 'react-router-config'
+import * as Sentry from '@sentry/browser'
 
 import routes from './routes/routes'
 import analytics from './analytics'
 import { loadState, saveState } from 'app/store/localStorage'
 import { ScrollToTop } from 'app/ui-kit'
+
+const dsn = process.env.SENTRY_DSN
+const environment = process.env.DEPLOY_ENV
+Sentry.init({ dsn, environment })
 
 const browserHistory = createHistory()
 
