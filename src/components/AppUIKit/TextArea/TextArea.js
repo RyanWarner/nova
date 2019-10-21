@@ -1,15 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { asField } from 'informed'
 
 import * as S from './styles'
 
-export default class AppTextInput extends Component {
-  render () {
-    const { label, helperText } = this.props
+export default asField(({ fieldState, fieldApi, ...props }) => {
+  const { value } = fieldState
+  const { setValue, setTouched } = fieldApi
+  const { onChange, onBlur, defaultValue, forwardedRef, ...rest } = props
 
-    return <S.InputWrap>
-      {label && <S.Label>{label}</S.Label>}
-      <S.TextArea {...this.props} />
-      <S.Error>{helperText}</S.Error>
-    </S.InputWrap>
-  }
-}
+  return (
+    <S.TextAreaComponent>
+      <S.Label>{props.label}</S.Label>
+      <S.TextArea
+        fieldState={fieldState}
+        {...rest}
+        value={value}
+        onChange={e => {
+          setValue(e.target.value)
+          if (onChange) { onChange(e.target.value) }
+        }}
+        onBlur={e => {
+          setTouched(true)
+          if (onBlur) { onBlur(e) }
+        }}
+      />
+    </S.TextAreaComponent>
+  )
+})

@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import TextArea from './TextArea'
+import { Form } from 'informed'
+
+<Meta title='Components|UI Kit/TextArea' component={TextArea} />
+
+# TextArea
+
+<Preview>
+  <Story name='Default'>
+    <Form>
+      <TextArea
+        field='name'
+      />
+    </Form>
+  </Story>
+</Preview>
+
+<Props of={TextArea} />
