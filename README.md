@@ -1,4 +1,6 @@
-# React Starter
+# Nova
+
+An opinionated starting point for Single Page Applications.
 
 ## Getting Started
 

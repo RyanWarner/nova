@@ -36,7 +36,7 @@ export default create({
   inputTextColor: 'black',
   inputBorderRadius: 4,
 
-  brandTitle: 'Yawnch React Starter',
+  brandTitle: 'Yawnch - Nova',
   brandUrl: 'https://yawnch.com',
   // brandImage: logo,
 });

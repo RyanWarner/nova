@@ -10,7 +10,7 @@ export default [{
       path: '/',
       component: AppRoot,
       meta: {
-        title: 'Yawnch - React Starter',
+        title: 'Yawnch - Nova',
         description: 'An opinionated starting point for web applications.'
       },
       routes: [{

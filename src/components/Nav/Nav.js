@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import * as S from './styles'
 
-const githubLink = 'https://github.com/yawnch/react-starter'
+const githubLink = 'https://github.com/yawnch/nova'
 
 export default class Nav extends Component {
   render () {
