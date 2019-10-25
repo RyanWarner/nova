@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Select, { components } from 'react-select'
 
 import { Colors, Type } from 'app/styles'
-import { ChevronDown } from 'app/ui-kit/Icons'
+import { Check } from 'app/ui-kit/Icons'
 
 export const StyledSelect = styled(Select)`
   min-width: 100px;
@@ -73,7 +73,7 @@ export const StyledSelect = styled(Select)`
   }
 `
 
-export const StyledChevronDown = styled(ChevronDown)`
+export const StyledChevronDown = styled(Check)`
   width: 10px;
   height: 10px;
   margin: 0 8px;

@@ -3,6 +3,7 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const paths = require('../paths')
 const Dotenv = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const deployEnv = process.env.DEPLOY_ENV || 'development'
 
@@ -23,6 +24,10 @@ const client = [
   }),
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/, /\.stories\./)
 ]
+
+if (process.env.ANALYZER === 'true') {
+  client.push(new BundleAnalyzerPlugin())
+}
 
 module.exports = {
   shared,
