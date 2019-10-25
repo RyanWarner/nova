@@ -70,7 +70,7 @@ export default class ModalController extends Component {
         <AriaModal {...modalOptions} {...modalState}>
           {activeModal &&
             <div className={modalClass}>
-              <S.CloseX onClick={this.closeModal} />
+              <S.CloseX onClick={this.onModalExit} />
               <Modal
                 closeModal={this.onModalExit}
                 openModal={this.openModal}
