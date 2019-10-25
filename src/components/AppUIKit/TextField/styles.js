@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BasicText } from 'informed'
 
-import { Colors, Type, Inputs } from 'app/styles'
+import { Inputs } from 'app/styles'
 
 export const TextFieldComponent = styled.div`
   flex-grow: 1;
@@ -20,22 +20,9 @@ export const TextInput = styled(BasicTextCleanProps)`
 `
 
 export const Error = styled.div`
-  ${Type.smallBody}
-  color: ${Colors.error};
-  position: relative;
-  height: 20px;
-  margin: 3px 0 0 3px;
+  ${Inputs.error};
 `
 
-export const Labels = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 6px 2px;
-  height: 20px;
-`
-
-export const Label = styled.div`
-  ${Type.body}
-  position: relative;
-  color: ${Colors.font10};
+export const Label = styled.label`
+  ${Inputs.label};
 `

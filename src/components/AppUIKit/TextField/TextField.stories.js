@@ -1,5 +1,6 @@
 import React from 'react'
 import TextField from './TextField'
+import { Form } from 'informed'
 
 export default {
   title: 'Components|UI Kit/TextField',
@@ -7,5 +8,10 @@ export default {
 }
 
 export const basic = () => (
-  <TextField />
+  <Form>
+    <TextField
+      field='name'
+      label='Name'
+    />
+  </Form>
 )

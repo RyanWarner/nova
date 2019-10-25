@@ -4,13 +4,13 @@ import { asField } from 'informed'
 import * as S from './styles'
 
 export default asField(({ fieldState, fieldApi, ...props }) => {
-  const { value } = fieldState
+  const { value, error } = fieldState
   const { setValue, setTouched } = fieldApi
   const { onChange, onBlur, defaultValue, forwardedRef, ...rest } = props
 
   return (
     <S.TextAreaComponent>
-      <S.Label>{props.label}</S.Label>
+      {props.label && <S.Label htmlFor={props.field}>{props.label}</S.Label>}
       <S.TextArea
         fieldState={fieldState}
         {...rest}
@@ -24,6 +24,7 @@ export default asField(({ fieldState, fieldApi, ...props }) => {
           if (onBlur) { onBlur(e) }
         }}
       />
+      <S.Error>{error}</S.Error>
     </S.TextAreaComponent>
   )
 })

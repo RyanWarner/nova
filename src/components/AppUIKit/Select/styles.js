@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Select, { components } from 'react-select'
 
-import { Colors, Type } from 'app/styles'
+import { Colors, Inputs, Type } from 'app/styles'
 import { Check } from 'app/ui-kit/Icons'
 
 export const StyledSelect = styled(Select)`
@@ -88,6 +88,7 @@ export const DropdownIndicator = (props) => {
 }
 
 export const SelectComponent = styled.div``
-export const Label = styled.div`
-  font-size: 14px;
+
+export const Label = styled.label`
+  ${Inputs.label};
 `
