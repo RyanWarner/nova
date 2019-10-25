@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import 'focus-visible'
 
 import { Breakpoints, Colors, Type } from 'app/styles'
 
@@ -28,6 +29,16 @@ export const Button = styled(ButtonCleanProps)`
 
   &:active {
     background: ${Colors.brand};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(103, 89, 208, 0.5);
+  }
+
+  &:focus:not(.focus-visible) {
+    outline: none;
+    box-shadow: none;
   }
 
   ${props => props.disabled && css`
