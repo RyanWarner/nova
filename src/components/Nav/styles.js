@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Colors, Shadows, Breakpoints, Sizes } from 'app/styles'
 import { YawnchLogo } from 'app/ui-kit/Icons'
 
-export const NavComponent = styled.div`
+export const NavComponent = styled.header`
   height: ${Sizes.navHeight};
   background-color: ${Colors.black};
   box-shadow: ${Shadows.main};
@@ -40,7 +40,7 @@ export const StyledYawnchLogo = styled(YawnchLogo)`
   width: 20px;
 `
 
-export const NavItems = styled.div`
+export const NavItems = styled.nav`
   display: flex;
 `
 

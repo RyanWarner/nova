@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Colors, Animations } from 'app/styles'
 
-export const HomePage = styled.div`
+export const HomePage = styled.main`
   animation: ${Animations.FadeIn} 1250ms forwards;
   animation-delay: 250ms;
   opacity: 0;
