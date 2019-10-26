@@ -3,7 +3,7 @@ import { css, createGlobalStyle } from 'styled-components'
 import { Breakpoints, Colors } from 'app/styles'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
-export const fontFace = `'Manrope', ${sansSerifFallback}`
+export const fontFace = `'Open Sans', ${sansSerifFallback}`
 
 export const fontWeights = {
   regular: 400,
