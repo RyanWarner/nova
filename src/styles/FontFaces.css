@@ -16,7 +16,7 @@
        url('../assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
        url('../assets/fonts/OpenSans-SemiBold.woff') format('woff'),
        url('../assets/fonts/OpenSans-SemiBold.ttf') format('opentype');
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -27,6 +27,6 @@
        url('../assets/fonts/OpenSans-Bold.woff2') format('woff2'),
        url('../assets/fonts/OpenSans-Bold.woff') format('woff'),
        url('../assets/fonts/OpenSans-Bold.ttf') format('opentype');
-  font-weight: 600;
+  font-weight: 700;
   font-style: bold;
 }

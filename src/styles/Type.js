@@ -7,7 +7,6 @@ export const fontFace = `'Open Sans', ${sansSerifFallback}`
 
 export const fontWeights = {
   regular: 400,
-  medium: 500,
   semiBold: 600,
   bold: 'bold'
 }
@@ -26,26 +25,25 @@ export const largeInput = css`
 `
 
 export const header1 = css`
-  font-size: 24px;
+  font-size: 43px;
   line-height: 152%;
-  font-weight: ${fontWeights.bold};
-  margin: 0 0 30px 0;
+  font-weight: ${fontWeights.semiBold};
 
   @media(max-width: ${Breakpoints.main}) {
-    font-size: 18px;
+    font-size: 32px;
   }
 `
+
 export const header2 = css`
   font-size: 20px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
-  margin: 0 0 20px 0;
 `
+
 export const header3 = css`
   font-size: 16px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
-  margin: 0 0 20px 0;
 `
 
 export const GlobalStyle = createGlobalStyle`

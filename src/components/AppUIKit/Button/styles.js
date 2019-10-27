@@ -16,11 +16,10 @@ export const Button = styled(ButtonCleanProps)`
   align-items: center;
   box-sizing: border-box;
   transition: background 275ms ease;
-  height: 55px;
+  height: 46px;
   color: ${Colors.beige20};
   background: ${Colors.brand10};
-  border-radius: 36px;
-  min-width: 268px;
+  border-radius: 6px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:hover {
@@ -72,7 +71,7 @@ export const ButtonText = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   width: 100%;
 
