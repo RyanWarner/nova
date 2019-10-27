@@ -6,7 +6,10 @@ export default class Help extends Component {
   render () {
     return (
       <S.HelpComponent>
-        🚀 Help
+        <S.Title>Need help?</S.Title>
+        <S.Description>
+          Subscribe to Yawnch and unlock unlimited access to
+        </S.Description>
       </S.HelpComponent>
     )
   }

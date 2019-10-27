@@ -35,9 +35,13 @@ export const header1 = css`
 `
 
 export const header2 = css`
-  font-size: 20px;
+  font-size: 34px;
   line-height: 152%;
-  font-weight: ${fontWeights.bold};
+  font-weight: ${fontWeights.semiBold};
+
+  @media(max-width: ${Breakpoints.main}) {
+    font-size: 26px;
+  }
 `
 
 export const header3 = css`
