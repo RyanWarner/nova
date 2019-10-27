@@ -10,4 +10,5 @@ export const HomePage = styled.main`
   justify-content: center;
   background: ${Colors.beige10};
   color: ${Colors.gray10};
+  margin-top: 200px;
 `
