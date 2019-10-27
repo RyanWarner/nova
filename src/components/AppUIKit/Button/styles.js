@@ -20,6 +20,7 @@ export const Button = styled(ButtonCleanProps)`
   color: ${Colors.beige20};
   background: ${Colors.brand10};
   border-radius: 6px;
+  border: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:hover {

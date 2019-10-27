@@ -2,21 +2,20 @@ import React, { Component } from 'react'
 
 import * as S from './styles'
 
-const githubLink = 'https://github.com/yawnch/nova'
+import { Wordmark, NavLinks } from 'app/components'
 
 export default class Nav extends Component {
   render () {
     return (
       <S.NavComponent>
         <S.LogoLink to='/'>
-          <S.StyledYawnchLogo />
-          <S.LogoText>Yawnch</S.LogoText>
+          <Wordmark />
         </S.LogoLink>
-        <S.NavItems>
-          <S.NavA href={githubLink} target='_blank'>Github</S.NavA>
-          <S.NavA href={githubLink} target='_blank'>Slack</S.NavA>
-          <S.NavLink to='/admin'>Admin</S.NavLink>
-        </S.NavItems>
+        <NavLinks />
+        <S.AuthButtons>
+          <S.LogIn>Log in</S.LogIn>
+          <S.SignUp>Sign up</S.SignUp>
+        </S.AuthButtons>
       </S.NavComponent>
     )
   }

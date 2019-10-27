@@ -20,8 +20,8 @@ export const smallBody = css`
   line-height: 150%;
 `
 
-export const largeInput = css`
-  font-size: 24px;
+export const body30 = css`
+  font-size: 20px;
 `
 
 export const header1 = css`
