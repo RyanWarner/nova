@@ -8,8 +8,8 @@ export const PrivacyPage = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${Colors.black};
-  color: ${Colors.white};
+  background: ${Colors.beige10};
+  color: ${Colors.gray10};
 `
 
 export const MaxWidth = styled.div`

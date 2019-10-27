@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { Colors, Shadows, Breakpoints, Sizes } from 'app/styles'
-import { YawnchLogo } from 'app/ui-kit/Icons'
+import { Colors, Breakpoints, Sizes } from 'app/styles'
+import { Button } from 'app/ui-kit'
 
 export const NavComponent = styled.header`
   height: ${Sizes.navHeight};
-  background-color: ${Colors.black};
-  box-shadow: ${Shadows.main};
+  background-color: ${Colors.beige20};
   width: 100vw;
   display: flex;
   align-items: center;
@@ -30,15 +29,13 @@ export const LogoLink = styled(Link)`
   align-items: center;
 `
 
-export const LogoText = styled.div`
-  margin-left: 10px;
-  font-weight: bold;
+export const AuthButtons = styled.div`
+  display: flex;
 `
 
-export const StyledYawnchLogo = styled(YawnchLogo)`
-  height: 36px;
-  width: 20px;
-`
+export const LogIn = styled(Button)``
+
+export const SignUp = styled(Button)``
 
 export const NavItems = styled.nav`
   display: flex;

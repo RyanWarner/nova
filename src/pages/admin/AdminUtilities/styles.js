@@ -22,14 +22,14 @@ export const CurrentUserNavContentComponent = styled.div`
 
 export const CurrentUserNavItem = styled.div`
   padding: 10px 0;
-  border-bottom: 1px solid ${Colors.borderGray};
+  border-bottom: 1px solid ${Colors.gray10};
   cursor: pointer;
   font-size: 16px;
   transition: all .2s ease;
   display: flex;
 
   &:hover {
-    color: ${Colors.brand};
+    color: ${Colors.brand30};
   }
 
   &:last-child {

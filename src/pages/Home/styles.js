@@ -1,16 +1,14 @@
 import styled from 'styled-components'
 
-import { Colors, Animations } from 'app/styles'
+import { Colors } from 'app/styles'
 
 export const HomePage = styled.main`
-  animation: ${Animations.FadeIn} 1250ms forwards;
-  animation-delay: 250ms;
-  opacity: 0;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${Colors.black};
-  color: ${Colors.white};
+  background: ${Colors.beige10};
+  color: ${Colors.gray10};
+  margin-top: 200px;
 `

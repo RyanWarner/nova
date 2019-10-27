@@ -3,11 +3,10 @@ import { css, createGlobalStyle } from 'styled-components'
 import { Breakpoints, Colors } from 'app/styles'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
-export const fontFace = `'Manrope', ${sansSerifFallback}`
+export const fontFace = `'Open Sans', ${sansSerifFallback}`
 
 export const fontWeights = {
   regular: 400,
-  medium: 500,
   semiBold: 600,
   bold: 'bold'
 }
@@ -21,31 +20,34 @@ export const smallBody = css`
   line-height: 150%;
 `
 
-export const largeInput = css`
-  font-size: 24px;
+export const body30 = css`
+  font-size: 20px;
 `
 
 export const header1 = css`
-  font-size: 24px;
+  font-size: 43px;
   line-height: 152%;
-  font-weight: ${fontWeights.bold};
-  margin: 0 0 30px 0;
+  font-weight: ${fontWeights.semiBold};
 
   @media(max-width: ${Breakpoints.main}) {
-    font-size: 18px;
+    font-size: 32px;
   }
 `
+
 export const header2 = css`
-  font-size: 20px;
+  font-size: 34px;
   line-height: 152%;
-  font-weight: ${fontWeights.bold};
-  margin: 0 0 20px 0;
+  font-weight: ${fontWeights.semiBold};
+
+  @media(max-width: ${Breakpoints.main}) {
+    font-size: 26px;
+  }
 `
+
 export const header3 = css`
   font-size: 16px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
-  margin: 0 0 20px 0;
 `
 
 export const GlobalStyle = createGlobalStyle`
@@ -64,12 +66,12 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 38px;
   }
   a {
-    color: ${Colors.white};
+    color: ${Colors.brand10};
     text-decoration: none;
     transition: color 300ms ease;
 
     &:hover {
-      color: ${Colors.brand};
+      color: ${Colors.brand20};
     }
   }
 `

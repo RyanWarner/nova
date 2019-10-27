@@ -8,15 +8,15 @@ export const CheckboxWrap = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  background: ${Colors.gray5};
-  border: 1px solid ${Colors.gray3};
+  background: ${Colors.beige20};
+  border: 1px solid ${Colors.gray10};
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &:hover {
-    border: 1px solid ${Colors.gray2};
+    border: 1px solid ${Colors.brand30};
   }
 `
 
@@ -29,7 +29,7 @@ export const StyledCheck = styled(Check)`
   transition: opacity 175ms ease;
 
   g {
-    fill: ${Colors.brand};
+    fill: ${Colors.brand10};
   }
 `
 

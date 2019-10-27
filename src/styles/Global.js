@@ -11,8 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: ${Colors.black};
-    color: ${Colors.fontPrimary};
+    background-color: ${Colors.beige10};
+    color: ${Colors.gray10};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${Colors.brand};
+    background: ${Colors.brand10};
   }
 
   #app {

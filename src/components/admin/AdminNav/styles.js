@@ -7,7 +7,7 @@ import { YawnchLogo } from 'app/ui-kit/Icons'
 export const AdminNavComponent = styled.div`
   height: 100vh;
   width: 240px;
-  background-color: ${Colors.darkGray};
+  background-color: ${Colors.gray10};
   position: fixed;
   left: 0;
   top: 0;
@@ -20,8 +20,8 @@ export const AdminNavTitle = styled.div`
 `
 
 export const Environment = styled.div`
-  border-top: 1px solid ${Colors.adminNavBorder};
-  border-bottom: 1px solid ${Colors.adminNavBorder};
+  border-top: 1px solid ${Colors.beige10};
+  border-bottom: 1px solid ${Colors.beige10};
   padding: 14px 0;
   margin: 6px 20px 26px 20px;
   display: flex;
@@ -33,8 +33,8 @@ export const EnvironmentTag = styled.div`
   font-size: 12px;
   font-weight: ${Type.fontWeights.bold};
   padding: 1px 11px;
-  background-color: ${Colors.brand};
-  color: ${Colors.white};
+  background-color: ${Colors.brand10};
+  color: ${Colors.beige10};
   align-self: flex-start;
   margin-left: 10px;
 `
@@ -47,7 +47,7 @@ export const AdminNavItems = styled.div`
 export const AdminNavItem = styled(Link)`
   height: 30px;
   padding: 0 10px;
-  color: ${Colors.fontPrimary};
+  color: ${Colors.beige10};
   font-size: 14px;
   border-radius: 3px;
   margin: 0 20px 4px 20px;
@@ -56,7 +56,7 @@ export const AdminNavItem = styled(Link)`
   transition: all 300ms ease;
 
   ${props => props.selected && css`
-    background-color: ${Colors.black};
+    background-color: ${Colors.gray10};
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   `}
 `
@@ -65,7 +65,7 @@ export const AdminLabel = styled.div`
   font-size: 10px;
   text-transform: uppercase;
   font-weight: ${Type.fontWeights.demiBold};
-  color: ${Colors.fontLight};
+  color: ${Colors.beige10};
   margin-left: 8px;
 `
 
