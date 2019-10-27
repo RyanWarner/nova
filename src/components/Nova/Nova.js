@@ -1,11 +1,14 @@
 import React from 'react'
 
 import * as S from './styles'
-import { globe, rings } from 'app/assets/images'
+import { globe, rings, space } from 'app/assets/images'
 
 export default props => (
   <S.NovaComponent>
-    <S.StyledGlobe src={globe} />
-    <S.StyledRings src={rings} />
+    <S.StyledSpace src={space} />
+    <S.Nova>
+      <S.StyledGlobe src={globe} />
+      <S.StyledRings src={rings} />
+    </S.Nova>
   </S.NovaComponent>
 )
