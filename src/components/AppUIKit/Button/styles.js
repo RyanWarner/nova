@@ -17,23 +17,23 @@ export const Button = styled(ButtonCleanProps)`
   box-sizing: border-box;
   transition: background 275ms ease;
   height: 55px;
-  color: ${Colors.fontDark};
-  background: ${Colors.brand};
+  color: ${Colors.beige20};
+  background: ${Colors.brand10};
   border-radius: 36px;
   min-width: 268px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:hover {
-    background: ${Colors.brandLight};
+    background: ${Colors.brand20};
   }
 
   &:active {
-    background: ${Colors.brand};
+    background: ${Colors.brand30};
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(103, 89, 208, 0.5);
+    box-shadow: 0 0 0 3px rgba(212, 175, 255, .95);
   }
 
   &:focus:not(.focus-visible) {
@@ -47,11 +47,11 @@ export const Button = styled(ButtonCleanProps)`
   `}
 
   ${props => props.options?.theme === 'secondary' && css`
-    background: ${Colors.gray1};
-    color: ${Colors.brand};
+    background: ${Colors.gray10};
+    color: ${Colors.brand10};
 
     &:hover {
-      background: ${Colors.gray1Light};
+      background: ${Colors.gray10};
     }
   `}
 

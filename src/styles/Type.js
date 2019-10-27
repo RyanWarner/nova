@@ -64,12 +64,12 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 38px;
   }
   a {
-    color: ${Colors.white};
+    color: ${Colors.brand10};
     text-decoration: none;
     transition: color 300ms ease;
 
     &:hover {
-      color: ${Colors.brand};
+      color: ${Colors.brand20};
     }
   }
 `

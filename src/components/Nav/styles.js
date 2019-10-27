@@ -6,7 +6,7 @@ import { YawnchLogo } from 'app/ui-kit/Icons'
 
 export const NavComponent = styled.header`
   height: ${Sizes.navHeight};
-  background-color: ${Colors.black};
+  background-color: ${Colors.beige20};
   box-shadow: ${Shadows.main};
   width: 100vw;
   display: flex;

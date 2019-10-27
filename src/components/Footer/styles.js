@@ -45,7 +45,7 @@ const footerNavItemShared = css`
   margin-right: 24px;
   font-size: 14px;
   font-weight: ${Type.fontWeights.medium};
-  color: ${Colors.white};
+  color: ${Colors.beige10};
 
   &:last-child {
     margin-right: 0;
@@ -66,7 +66,7 @@ export const StyledFooterA = styled.a`
 
 export const Copyright = styled.div`
   margin-left: auto;
-  color: ${Colors.white};
+  color: ${Colors.beige10};
   font-size: 14px;
 
   @media(max-width: ${Breakpoints.main}) {
@@ -79,7 +79,7 @@ export const Copyright = styled.div`
 export const Rule = styled.div`
   width: 100%;
   height: 1px;
-  background-color: ${Colors.darkBlueGray};
+  background-color: ${Colors.gray10};
   margin: 21px 0 24px 0;
 
   @media(max-width: ${Breakpoints.main}) {

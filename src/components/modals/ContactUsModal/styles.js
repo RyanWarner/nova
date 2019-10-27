@@ -7,7 +7,7 @@ export const ContactUsModalComponent = styled.div`
   padding: 48px 96px;
   width: 753px;
   box-sizing: border-box;
-  background-color: ${Colors.white};
+  background-color: ${Colors.beige10};
   border-radius: 12px;
 
   @media(max-width: ${Breakpoints.main}){
@@ -19,7 +19,7 @@ export const ContactUsModalComponent = styled.div`
 export const Title = styled.h3`
   margin-bottom: 40px;
   line-height: 30px;
-  color: ${Colors.darkBlue};
+  color: ${Colors.gray10};
   text-align: center;
 `
 
