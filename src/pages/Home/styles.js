@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-import { Colors } from 'app/styles'
+import { Colors, Sizes } from 'app/styles'
+import { TechList } from 'app/components'
 
 export const HomePage = styled.main`
   min-height: 100%;
@@ -10,5 +11,13 @@ export const HomePage = styled.main`
   justify-content: center;
   background: ${Colors.beige10};
   color: ${Colors.gray10};
-  margin-top: 200px;
+  padding-top: ${Sizes.navHeight};
+  flex-shrink: 0;
+`
+
+export const StyledTechList = styled(TechList)`
+  background-color: ${Colors.beige20};
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 `

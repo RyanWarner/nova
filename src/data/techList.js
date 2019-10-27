@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import {
   ReactLogo,
@@ -6,7 +7,6 @@ import {
   ReactRouter,
   Cypress,
   Webpack,
-  Babel,
   Storybook,
   Amplitude,
   Sentry,
@@ -14,37 +14,56 @@ import {
   CircleCI
 } from 'app/ui-kit/Icons'
 
+import { babelLogo, nails } from 'app/assets/images'
+
+const Logo = styled.img`
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+`
+
+const BabelLogo = styled.img`
+  width: 38px;
+  margin: 1px;
+`
+
 export default {
   react: {
     display: 'React',
-    description: '',
+    description: 'Industry leading UI framework',
     url: '/docs',
     icon: <ReactLogo />
   },
+  styledComponents: {
+    display: 'Styled Components',
+    description: 'Mature css-in-js solution',
+    url: '/docs',
+    icon: <Logo src={nails} />
+  },
+  amplitude: {
+    display: 'Amplitude',
+    description: 'Analytics',
+    url: '/docs',
+    icon: <Amplitude />
+  },
   redux: {
     display: 'Redux',
-    description: '',
+    description: 'Predictable state container',
     url: '/docs',
     icon: <Redux />
   },
   reactRouter: {
     display: 'React Router',
-    description: '',
+    description: 'Declarative routing for React',
     url: '/docs',
     icon: <ReactRouter />
   },
   cypress: {
     display: 'Testing',
-    description: '',
+    description: 'Coming soon!',
     url: '/docs',
     icon: <Cypress />,
     comingSoon: true
-  },
-  styledComponents: {
-    display: 'Styled Components',
-    description: '',
-    url: '/docs',
-    icon: <div />
   },
   webpack: {
     display: 'Webpack',
@@ -54,37 +73,31 @@ export default {
   },
   babel: {
     display: 'Babel',
-    description: '',
+    description: 'JavaScript from the future',
     url: '/docs',
-    icon: <Babel />
+    icon: <BabelLogo src={babelLogo} />
   },
   storybook: {
     display: 'Storybook',
-    description: '',
+    description: 'Component driven development & docs',
     url: '/docs',
     icon: <Storybook />
   },
-  amplitude: {
-    display: 'Amplitude',
-    description: '',
-    url: '/docs',
-    icon: <Amplitude />
-  },
   sentry: {
     display: 'Sentry',
-    description: '',
+    description: 'Error reporting',
     url: '/docs',
     icon: <Sentry />
   },
   aws: {
     display: 'Amazon Web Services',
-    description: '',
+    description: 'Hosting, DNS, CDN',
     url: '/docs',
     icon: <Aws />
   },
   circleci: {
     display: 'CircleCI',
-    description: '',
+    description: 'Continuous delivery',
     url: '/docs',
     icon: <CircleCI />
   }

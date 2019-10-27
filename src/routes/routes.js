@@ -9,16 +9,12 @@ export default [{
     ...adminRoutes, {
       path: '/',
       component: AppRoot,
-      meta: {
-        title: 'Yawnch - Nova',
-        description: 'An opinionated starting point for web applications.'
-      },
       routes: [{
         path: '/',
         exact: true,
         component: Home,
         meta: {
-          title: 'Yawnch - React, Firebase, SSR',
+          title: 'Nova',
           description: 'An opinionated starting point for web applications.'
         }
       }, {

@@ -27,7 +27,7 @@ export const body30 = css`
 export const header1 = css`
   font-size: 43px;
   line-height: 152%;
-  font-weight: ${fontWeights.semiBold};
+  font-weight: ${fontWeights.bold};
 
   @media(max-width: ${Breakpoints.main}) {
     font-size: 32px;
@@ -45,9 +45,9 @@ export const header2 = css`
 `
 
 export const header3 = css`
-  font-size: 16px;
+  font-size: 23px;
   line-height: 152%;
-  font-weight: ${fontWeights.bold};
+  font-weight: ${fontWeights.semiBold};
 `
 
 export const GlobalStyle = createGlobalStyle`
@@ -61,9 +61,7 @@ export const GlobalStyle = createGlobalStyle`
     ${header3};
   }
   p {
-    ${smallBody};
-    margin-top: 0;
-    margin-bottom: 38px;
+    margin: 0;
   }
   a {
     color: ${Colors.brand10};
