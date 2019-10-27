@@ -5,15 +5,15 @@ import { Colors, Type } from 'app/styles'
 // import { logo } from 'app/assets/images'
 
 export default create({
-  // base: Colors.background,
+  base: Colors.beige10,
 
-  colorPrimary: Colors.brand,
-  colorSecondary: Colors.blue,
-  sidebarSvgIconColor: Colors.brand,
+  colorPrimary: Colors.brand10,
+  colorSecondary: Colors.orange10,
+  sidebarSvgIconColor: Colors.brand10,
 
   // UI
   // appBg: Colors.mediumGray,
-  // appContentBg: Colors.white,
+  appContentBg: Colors.beige20,
   // appBorderColor: Colors.mediumGray,
   appBorderRadius: 6,
 
@@ -27,14 +27,14 @@ export default create({
 
   // Toolbar default and active colors
   barTextColor: 'black',
-  barSelectedColor: Colors.brand,
+  barSelectedColor: Colors.brand10,
   // barBg: Colors.white,
 
   // Form colors
-  // inputBg: Colors.background,
+  inputBg: Colors.brand20,
   inputBorder: 'transparent',
-  inputTextColor: 'black',
-  inputBorderRadius: 4,
+  inputTextColor: Colors.gray10,
+  inputBorderRadius: 6,
 
   brandTitle: 'Yawnch - Nova',
   brandUrl: 'https://yawnch.com',

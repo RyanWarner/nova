@@ -8,8 +8,8 @@ export const NotFoundPage = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: ${Colors.white};
-  background-color: ${Colors.darkBlue};
+  color: ${Colors.beige10};
+  background-color: ${Colors.gray10};
   margin-top: -140px;
   padding-top: 140px;
 `

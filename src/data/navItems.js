@@ -1,10 +1,27 @@
 export default {
   0: {
-    display: 'nav1',
-    url: '/nav1'
+    display: 'Docs',
+    type: 'link',
+    url: '/docs'
   },
   1: {
-    display: 'nav2',
-    url: '/nav2'
+    display: 'GitHub',
+    type: 'a',
+    url: 'https://github.com/yawnch/nova'
+  },
+  3: {
+    display: 'Boilerplates',
+    type: 'a',
+    url: 'https://yawnch.com/boilerplates'
+  },
+  4: {
+    display: 'Courses',
+    type: 'a',
+    url: 'https://yawnch.com/courses'
+  },
+  5: {
+    display: 'Community',
+    type: 'a',
+    url: 'https://yawnch.com/community'
   }
 }
