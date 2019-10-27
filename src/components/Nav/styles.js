@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { Colors, Breakpoints, Sizes } from 'app/styles'
+import { Breakpoints, Sizes } from 'app/styles'
 import { Button } from 'app/ui-kit'
 
 export const NavComponent = styled.header`
   height: ${Sizes.navHeight};
-  background-color: ${Colors.beige20};
+  background-color: rgba(255, 255, 255, 0.85);
   width: 100vw;
   display: flex;
   align-items: center;
@@ -17,6 +17,7 @@ export const NavComponent = styled.header`
   top: 0;
   left: 0;
   z-index: 2;
+  backdrop-filter: blur(5px);
 
   @media(max-width: ${Breakpoints.main}) {
     padding: 0 20px;
@@ -33,7 +34,9 @@ export const AuthButtons = styled.div`
   display: flex;
 `
 
-export const LogIn = styled(Button)``
+export const LogIn = styled(Button)`
+  margin-right: 10px;
+`
 
 export const SignUp = styled(Button)``
 

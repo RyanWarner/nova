@@ -46,17 +46,42 @@ export const Button = styled(ButtonCleanProps)`
     pointer-events: none;
   `}
 
-  ${props => props.options?.theme === 'secondary' && css`
-    background: ${Colors.gray10};
-    color: ${Colors.brand10};
+  ${props => props.options?.theme === 'orange' && css`
+    background: ${Colors.orange10};
 
     &:hover {
-      background: ${Colors.gray10};
+      background: ${Colors.orange20};
+    }
+
+    &:active {
+      background: ${Colors.orange30};
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px ${Colors.orange40};
+    }
+  `}
+
+  ${props => props.options?.theme === 'text' && css`
+    background: transparent;
+
+    &:hover {
+      background: ${Colors.orange20};
+    }
+
+    &:active {
+      background: ${Colors.orange30};
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px ${Colors.orange40};
     }
   `}
 
   ${props => props.options?.size === 'small' && css`
-    height: 45px;
+    height: 37px;
     min-width: auto;
   `}
 
@@ -77,10 +102,11 @@ export const ButtonText = styled.div`
   width: 100%;
 
   ${props => props.options?.size === 'small' && css`
-    font-size: 16px;
+    font-size: 14px;
+    padding: 0 18px;
   `}
 
-  @media(max-width: ${Breakpoints.main}) {
-    font-size: 16px;
-  }
+  ${props => props.options?.theme === 'text' && css`
+    color: ${Colors.gray10};
+  `}
 `

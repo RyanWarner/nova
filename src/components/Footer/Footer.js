@@ -1,43 +1,16 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
-
-const footerNavItems = {
-  faq: {
-    display: 'FAQ',
-    path: '/faq'
-  },
-  privacy: {
-    display: 'Privacy',
-    path: '/privacy'
-  },
-  termsOfUse: {
-    display: 'Terms',
-    path: '/terms'
-  }
-}
+import { NavLinks, MadeByYawnch } from 'app/components'
 
 export default class Footer extends Component {
-  renderFooterNavItems = () => {
-    return Object.values(footerNavItems).map(item => (
-      <S.FooterNavItem key={item.path} to={item.path}>{item.display}</S.FooterNavItem>
-    ))
-  }
-
   render () {
     return (
       <S.FooterComponent>
         <S.MaxWidth>
-          <S.Rule />
-          <S.FooterNav>
-            <S.NavItems>
-              {this.renderFooterNavItems()}
-              <S.StyledFooterA href='mailto:hello@yawnch.com'>
-                Contact
-              </S.StyledFooterA>
-            </S.NavItems>
-            <S.Copyright>© {new Date().getFullYear()} Yawnch</S.Copyright>
-          </S.FooterNav>
+          <MadeByYawnch />
+          <NavLinks />
+          <S.Copyright>MIT Licence</S.Copyright>
         </S.MaxWidth>
       </S.FooterComponent>
     )

@@ -16,7 +16,7 @@ export default class Button extends Component {
 
     return (
       <S.Button {...this.props}>
-        <S.ButtonText option={options}>
+        <S.ButtonText options={options}>
           {loading
             ? <Loading />
             : children}
