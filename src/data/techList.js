@@ -1,29 +1,43 @@
 import React from 'react'
 
+import {
+  ReactLogo,
+  Redux,
+  ReactRouter,
+  Cypress,
+  Webpack,
+  Babel,
+  Storybook,
+  Amplitude,
+  Sentry,
+  Aws,
+  CircleCI
+} from 'app/ui-kit/Icons'
+
 export default {
   react: {
     display: 'React',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <ReactLogo />
   },
   redux: {
     display: 'Redux',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Redux />
   },
   reactRouter: {
     display: 'React Router',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <ReactRouter />
   },
   cypress: {
     display: 'Testing',
     description: '',
     url: '/docs',
-    icon: <div />,
+    icon: <Cypress />,
     comingSoon: true
   },
   styledComponents: {
@@ -36,42 +50,42 @@ export default {
     display: 'Webpack',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Webpack />
   },
   babel: {
     display: 'Babel',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Babel />
   },
   storybook: {
     display: 'Storybook',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Storybook />
   },
   amplitude: {
     display: 'Amplitude',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Amplitude />
   },
   sentry: {
     display: 'Sentry',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Sentry />
   },
   aws: {
     display: 'Amazon Web Services',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <Aws />
   },
   circleci: {
     display: 'CircleCI',
     description: '',
     url: '/docs',
-    icon: <div />
+    icon: <CircleCI />
   }
 }
