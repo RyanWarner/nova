@@ -28,10 +28,12 @@ export const NavComponent = styled.header`
 export const LogoLink = styled(Link)`
   display: flex;
   align-items: center;
+  width: 205px;
 `
 
 export const AuthButtons = styled.div`
   display: flex;
+  width: 205px;
 `
 
 export const LogIn = styled(Button)`

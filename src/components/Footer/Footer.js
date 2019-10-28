@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
-import { NavLinks, MadeByYawnch } from 'app/components'
+import { MadeByYawnch } from 'app/components'
 
 export default class Footer extends Component {
   render () {
@@ -9,7 +9,7 @@ export default class Footer extends Component {
       <S.FooterComponent>
         <S.MaxWidth>
           <MadeByYawnch />
-          <NavLinks />
+          <S.StyledNavLinks />
           <S.Copyright>MIT Licence</S.Copyright>
         </S.MaxWidth>
       </S.FooterComponent>
