@@ -22,7 +22,8 @@ const docsMap = {
     pages: [
       'ui-kit',
       'forms',
-      'modals'
+      'modals',
+      'styling'
     ]
   },
   'state-and-api': {
