@@ -12,6 +12,8 @@ export const base = css`
   padding: 0 10px;
   width: 100%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.07);
+  border: 1px solid transparent;
+  transition: border 200ms ease;
 
   &:focus {
     border: 1px solid ${Colors.brand20};

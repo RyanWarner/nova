@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
 import FeatureCard from './FeatureCard'
+import { SlackLogo } from 'app/ui-kit/Icons'
 
 <Meta title='Components|FeatureCard' component={FeatureCard} />
 
@@ -7,7 +8,7 @@ import FeatureCard from './FeatureCard'
 
 <Preview>
   <Story name='Default'>
-    <FeatureCard />
+    <FeatureCard title='Live chat' icon={<SlackLogo />} />
   </Story>
 </Preview>
 

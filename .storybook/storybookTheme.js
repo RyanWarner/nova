@@ -14,7 +14,7 @@ export default create({
   // UI
   appBg: Colors.beige10,
   appContentBg: Colors.beige20,
-  // appBorderColor: Colors.mediumGray,
+  appBorderColor: Colors.gray20,
   appBorderRadius: 6,
 
   // Typography
@@ -28,7 +28,7 @@ export default create({
   // Toolbar default and active colors
   barTextColor: 'black',
   barSelectedColor: Colors.brand10,
-  // barBg: Colors.white,
+  barBg: Colors.beige20,
 
   // Form colors
   inputBg: Colors.brand20,
