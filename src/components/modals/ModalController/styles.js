@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-import { X } from 'app/ui-kit/Icons'
+import { X } from 'react-feather'
 
 export const OverlayWrap = styled.div``
 export const CloseX = styled(X)`

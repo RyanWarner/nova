@@ -70,6 +70,7 @@ export default class ModalController extends Component {
         <AriaModal {...modalOptions} {...modalState}>
           {activeModal &&
             <div className={modalClass}>
+              {/* eslint-disable-next-line react/jsx-handler-names */}
               <S.CloseX onClick={this.onModalExit} />
               <Modal
                 closeModal={this.onModalExit}

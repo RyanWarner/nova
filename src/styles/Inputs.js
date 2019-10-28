@@ -3,18 +3,29 @@ import { css } from 'styled-components'
 import { Colors, Type } from 'app/styles'
 
 export const base = css`
+  font-family: ${Type.fontFace};
+  font-size: 14px;
   border-radius: 4px;
   box-shadow: none;
   border: 0;
   height: 37px;
   padding: 0 10px;
+  width: 100%;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.07);
+
+  &:focus {
+    border: 1px solid ${Colors.brand20};
+    box-shadow: 0;
+    outline: 0;
+  }
 `
 
 export const label = css`
-  ${Type.body}
+  ${Type.smallBody}
   position: relative;
   color: ${Colors.font10};
   display: block;
+  margin-bottom: 2px;
 `
 
 export const error = css`
@@ -22,5 +33,5 @@ export const error = css`
   color: ${Colors.error};
   position: relative;
   height: 20px;
-  margin: 3px 0 0 3px;
+  margin: 5px 0 0 3px;
 `
