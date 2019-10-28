@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import * as S from './styles'
 import { Nova } from 'app/components'
@@ -12,7 +13,9 @@ export default class Hero extends Component {
           <S.Description>
             Nova is an open source, feature rich React boilerplate used to kickstart production ready web apps.
           </S.Description>
-          <S.StyledButton>Explore</S.StyledButton>
+          <Link to='/docs/getting-started/installation'>
+            <S.StyledButton>Explore</S.StyledButton>
+          </Link>
         </S.Text>
         <Nova />
       </S.HeroComponent>
