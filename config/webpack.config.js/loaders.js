@@ -29,16 +29,17 @@ const imageLoaderConfig = {
   }
 }
 
-const urlLoaderClient = {
+const urlLoader = {
   test: /\.(png|jpe?g|gif|svg|ttf|otf|eot|woff|woff2)$/,
   use: [urlLoaderConfig(true)]
 }
-const cssLoaderClient = {
+
+const cssLoader = {
   test: /\.css$/,
   use: ['style-loader', 'css-loader']
 }
 
-const fileLoaderClient = {
+const fileLoader = {
   exclude: [/\.(js|css|ejs|html|json)$/],
   use: [
     {
@@ -81,9 +82,9 @@ const client = [{
     eslintLoader,
     mdxLoader,
     babelLoader,
-    urlLoaderClient,
-    cssLoaderClient,
-    fileLoaderClient,
+    urlLoader,
+    cssLoader,
+    fileLoader
   ]
 }]
 

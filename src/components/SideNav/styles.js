@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import { Sizes } from 'app/styles'
 import Wordmark from '../Wordmark/Wordmark'
@@ -15,4 +16,8 @@ export const SideNavComponent = styled.div`
 export const StyledWordmark = styled(Wordmark)`
   margin-top: 40px;
   margin-left: 15px;
+`
+
+export const NavItem = styled(Link)`
+  display: block;
 `

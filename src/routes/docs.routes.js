@@ -13,8 +13,7 @@ export default [{
       description: 'Documentation'
     }
   }, {
-    path: '/docs/:doc',
-    exact: true,
+    path: '/docs/:section/:doc?',
     component: Docs,
     meta: {
       title: 'Yawnch - Docs',
