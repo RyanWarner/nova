@@ -1,3 +1,5 @@
+import { Home, Package, Shield, Sliders, HardDrive } from 'react-feather'
+
 function importAll (r) {
   const allMdx = {}
 
@@ -16,3 +18,56 @@ function importAll (r) {
 const docsList = importAll(require.context('./', true, /\.mdx$/))
 
 export default docsList
+
+export const docsMap = {
+  gettingStarted: {
+    title: 'Getting started',
+    id: 'getting-started',
+    Icon: Home,
+    pages: [
+      'installation'
+    ]
+  },
+  ui: {
+    title: 'UI & Components',
+    id: 'ui-and-components',
+    Icon: Package,
+    pages: [
+      'ui-kit',
+      'forms',
+      'modals',
+      'styling'
+    ]
+  },
+  'state-and-api': {
+    title: 'State & API',
+    id: 'state-and-api',
+    Icon: Shield,
+    pages: [
+      'redux',
+      'api-middleware',
+      'local-storage'
+    ]
+  },
+  tooling: {
+    title: 'Tooling',
+    id: 'tooling',
+    Icon: Sliders,
+    pages: [
+      'storybook',
+      'amplitude',
+      'sentry',
+      'plop'
+    ]
+  },
+  deployment: {
+    title: 'Deployment',
+    id: 'deployment',
+    Icon: HardDrive,
+    pages: [
+      'environments',
+      'aws',
+      'circle-ci'
+    ]
+  }
+}

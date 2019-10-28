@@ -1,63 +1,9 @@
 import React, { Component } from 'react'
-import { Home, Package, Shield, Sliders, HardDrive } from 'react-feather'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import * as S from './styles'
-import docs from 'app/data/docs'
+import docs, { docsMap } from 'app/data/docs'
 import { Colors } from 'app/styles'
-
-const docsMap = {
-  gettingStarted: {
-    title: 'Getting started',
-    id: 'getting-started',
-    Icon: Home,
-    pages: [
-      'installation'
-    ]
-  },
-  ui: {
-    title: 'UI & Components',
-    id: 'ui-and-components',
-    Icon: Package,
-    pages: [
-      'ui-kit',
-      'forms',
-      'modals',
-      'styling'
-    ]
-  },
-  'state-and-api': {
-    title: 'State & API',
-    id: 'state-and-api',
-    Icon: Shield,
-    pages: [
-      'redux',
-      'api-middleware',
-      'local-storage'
-    ]
-  },
-  tooling: {
-    title: 'Tooling',
-    id: 'tooling',
-    Icon: Sliders,
-    pages: [
-      'storybook',
-      'amplitude',
-      'sentry',
-      'plop'
-    ]
-  },
-  deployment: {
-    title: 'Deployment',
-    id: 'deployment',
-    Icon: HardDrive,
-    pages: [
-      'environments',
-      'aws',
-      'circle-ci'
-    ]
-  }
-}
 
 @withRouter
 export default class SideNav extends Component {
@@ -66,7 +12,9 @@ export default class SideNav extends Component {
 
     return (
       <S.SideNavComponent>
-        <S.StyledWordmark />
+        <Link to='/'>
+          <S.StyledWordmark />
+        </Link>
         {Object.values(docsMap).map((section, index) => {
           const selected = pathname.split('/')[2] === section.id
           const url = `/docs/${section.id}/${section.pages[0]}`

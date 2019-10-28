@@ -11,7 +11,7 @@ For small teams, we recomend 4 environments. 1 local, and 3 deployment environme
 Each environment has its own `.env` config file located in the top level `config` directory. [View on GitHub](https://github.com/yawnch/nova/tree/master/config).
 
 
-### Example
+### Example .env file
 
 **.env.production**
 ```
@@ -29,3 +29,15 @@ SENTRY_DSN=
 |---|---|
 | S3_BUCKET | The name of the S3 bucket. Used only for deploys from your local machine. |
 | AWS_PROFILE | The name of your machine's local AWS profile. Used only for deploys from your local machine. |
+
+### Naming
+
+We recommend the following naming convention:
+
+<br />
+
+| Environment | Bucket |
+|-------------|--------|
+| Develop | dev.yawnch.com |
+| Staging | stage.yawnch.com |
+| Production | yawnch.com |

@@ -5,7 +5,7 @@ import { Colors, Sizes, Type } from 'app/styles'
 export const DocsPage = styled.div`
   margin-left: ${Sizes.sideNavWidth};
   padding: 30px 50px;
-  max-width: 700px;
+  max-width: 740px;
   box-sizing: border-box;
 
   h1 {
@@ -40,5 +40,19 @@ export const DocsPage = styled.div`
       padding: 0;
       border-radius: 0;
     }
+  }
+
+  table {
+    border-spacing: 0;
+  }
+
+  td {
+    border-top: 1px solid rgba(0, 0, 0, 0.17);
+    padding: 20px 10px;
+    line-height: 180%;
+  }
+
+  th {
+    padding: 20px 10px;
   }
 `

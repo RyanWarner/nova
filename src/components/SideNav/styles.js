@@ -8,7 +8,7 @@ const xPadding = '18px'
 
 export const SideNavComponent = styled.div`
   width: ${Sizes.sideNavWidth};
-  background-color: rgba(255, 255, 255, 0.80);
+  background: linear-gradient(${Colors.beige20}, rgba(251, 248, 248, 0.35));
   height: 100vh;
   position: fixed;
   top: 0;
