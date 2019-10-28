@@ -6,7 +6,8 @@ export default class Wordmark extends Component {
   render () {
     return (
       <S.WordmarkComponent>
-        🚀 Wordmark
+        <S.StyledNovaSmall />
+        <S.Text>Nova</S.Text>
       </S.WordmarkComponent>
     )
   }
