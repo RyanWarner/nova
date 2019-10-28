@@ -6,7 +6,7 @@ export default class AmplitudeAnalytics {
   static initialize = async () => {
     if (typeof window !== 'undefined') {
       const amplitude = await require('amplitude-js')
-      this.Amplitude = amplitude.default.getInstance()
+      this.Amplitude = amplitude.getInstance()
       const options = { includeReferrer: true, includeUtm: true }
       this.Amplitude.init(amplitudeApiKey, null, options)
     }
