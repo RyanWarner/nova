@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${Colors.brand10};
+    background: ${Colors.brand40};
   }
 
   #app {

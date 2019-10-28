@@ -10,7 +10,7 @@ export default class Hero extends Component {
         <S.Text>
           <S.Title>Launch web apps faster</S.Title>
           <S.Description>
-            Nova is a feature rich React boilerplate used to kickstart production ready web apps.
+            Nova is an open source, feature rich React boilerplate used to kickstart production ready web apps.
           </S.Description>
           <S.StyledButton>Explore</S.StyledButton>
         </S.Text>

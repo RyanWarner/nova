@@ -12,5 +12,5 @@ export const StyledNovaSmall = styled(NovaSmall)``
 
 export const Text = styled.span`
   font-weight: ${Type.fontWeights.bold};
-  margin-left: 20px;
+  margin-left: 16px;
 `

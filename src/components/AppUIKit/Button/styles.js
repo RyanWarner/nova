@@ -98,7 +98,7 @@ export const ButtonText = styled.div`
   align-items: center;
   padding: 0 30px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: ${Type.fontWeights.semiBold};
   width: 100%;
 
   ${props => props.options?.size === 'small' && css`

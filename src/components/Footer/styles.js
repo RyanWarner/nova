@@ -8,7 +8,7 @@ export const FooterComponent = styled.footer`
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 46px ${Sizes.xAppPadding};
+  padding: 36px ${Sizes.xAppPadding};
   box-sizing: border-box;
 
   @media(max-width: ${Breakpoints.main}) {
@@ -40,7 +40,6 @@ export const Copyright = styled.div`
     font-size: 14px;
   }
 `
-
 
 export const StyledNavLinks = styled(NavLinks)`
 `

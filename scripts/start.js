@@ -8,7 +8,7 @@ const start = async () => {
   rimraf.sync(paths.clientBuild)
 
   const port = 8080
-  const host = '0.0.0.0'
+  const host = 'localhost'
 
   webpackConfig.watch = true
   const options = {
@@ -18,7 +18,8 @@ const start = async () => {
     disableHostCheck: true,
     port,
     contentBase: './public',
-    host
+    host,
+    open: true
   }
 
   WebpackDevServer.addDevServerEntrypoints(webpackConfig, options)
