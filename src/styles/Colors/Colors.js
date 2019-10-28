@@ -2,6 +2,7 @@ export const brand10 = '#6E5F80'
 export const brand20 = '#79688C'
 export const brand30 = '#917DA8'
 export const brand40 = '#CCA9F4'
+export const brand50 = '#E5CFFF'
 
 export const beige10 = '#EBE7E6'
 export const beige20 = '#FBF8F8'

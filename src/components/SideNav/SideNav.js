@@ -1,37 +1,16 @@
 import React, { Component } from 'react'
+import { Home, Package, Shield, Sliders, HardDrive } from 'react-feather'
+import { withRouter } from 'react-router-dom'
 
 import * as S from './styles'
-
-// function importAll (r) {
-//   return r.keys().map(key => ({
-//     module: r(key),
-//     fileName: key
-//   }))
-// }
-
-function importAll (r) {
-  const allMdx = {}
-
-  r.keys().forEach(key => {
-    const split = key.split('/')
-    const section = split[1]
-    const name = split[split.length - 1]
-    const normalizedKey = name.replace('.mdx', '')
-    if (!allMdx[section]) allMdx[section] = {}
-    allMdx[section][normalizedKey] = r(key)
-  })
-
-  return allMdx
-}
-
-const docsList = importAll(require.context('../../data/docs/', true, /\.mdx$/))
-console.log('docsList', docsList)
+import docs from 'app/data/docs'
+import { Colors } from 'app/styles'
 
 const docsMap = {
   gettingStarted: {
     title: 'Getting started',
     id: 'getting-started',
-    icon: '',
+    Icon: Home,
     pages: [
       'installation'
     ]
@@ -39,31 +18,78 @@ const docsMap = {
   ui: {
     title: 'UI & Components',
     id: 'ui-and-components',
-    icon: '',
+    Icon: Package,
     pages: [
       'ui-kit',
       'forms',
       'modals'
     ]
+  },
+  'state-and-api': {
+    title: 'State & API',
+    id: 'state-and-api',
+    Icon: Shield,
+    pages: [
+      'redux',
+      'api-middleware',
+      'local-storage'
+    ]
+  },
+  tooling: {
+    title: 'Tooling',
+    id: 'tooling',
+    Icon: Sliders,
+    pages: [
+      'storybook',
+      'plop'
+    ]
+  },
+  deployment: {
+    title: 'Deployment',
+    id: 'deployment',
+    Icon: HardDrive,
+    pages: [
+      'aws',
+      'circle-ci'
+    ]
   }
 }
 
+@withRouter
 export default class SideNav extends Component {
   render () {
+    const { pathname } = this.props.location
+
     return (
       <S.SideNavComponent>
         <S.StyledWordmark />
         {Object.values(docsMap).map((section, index) => {
-          return section.pages.map((item, index) => {
-            const url = `/docs/${section.id}/${item}`
-            return (
-              <S.NavItem key={index} to={url}>
-                {docsList[section.id][item].meta.title}
-              </S.NavItem>
-            )
-            {/* const MDXComponent = docsList[item].default
-            return <MDXComponent key={index} /> */}
-          })
+          const selected = pathname.split('/')[2] === section.id
+          const url = `/docs/${section.id}/${section.pages[0]}`
+
+          return (
+            <S.NavSection key={index}>
+              <S.SectionTitle selected={selected} to={url}>
+                <S.IconWrap>
+                  <section.Icon color={selected ? Colors.brand30 : Colors.gray20} />
+                </S.IconWrap>
+                {section.title}
+              </S.SectionTitle>
+
+              {section.pages.map((item, index) => {
+                const url = `/docs/${section.id}/${item}`
+                const selected = this.props.location.pathname === url
+
+                return (
+                  <S.NavItemWrap key={index}>
+                    <S.NavItem to={url} selected={selected}>
+                      {docs[section.id][item].meta.title}
+                    </S.NavItem>
+                  </S.NavItemWrap>
+                )
+              })}
+            </S.NavSection>
+          )
         })}
       </S.SideNavComponent>
     )
