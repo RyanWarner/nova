@@ -13,8 +13,22 @@ export default class Nav extends Component {
         </S.LogoLink>
         <NavLinks />
         <S.AuthButtons>
-          <S.LogIn>Log in</S.LogIn>
-          <S.SignUp>Sign up</S.SignUp>
+          <S.LogIn
+            options={{
+              theme: 'text',
+              size: 'small'
+            }}
+          >
+            Log in
+          </S.LogIn>
+          <S.SignUp
+            options={{
+              theme: 'orange',
+              size: 'small'
+            }}
+          >
+            Sign up
+          </S.SignUp>
         </S.AuthButtons>
       </S.NavComponent>
     )
