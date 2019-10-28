@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import Select, { components } from 'react-select'
 
 import { Colors, Inputs, Type } from 'app/styles'
-import { Check } from 'app/ui-kit/Icons'
+import { ChevronDown } from 'react-feather'
 
 export const StyledSelect = styled(Select)`
   min-width: 100px;
+  width: 100%;
 
   .ReactSelect__control {
     font-family: ${Type.fontFace};
@@ -17,52 +18,52 @@ export const StyledSelect = styled(Select)`
     box-sizing: border-box;
     min-height: 40px;
     border-radius: 4px;
-    background-color: ${Colors.darkGray};
-    border: 1px solid ${Colors.borderGray};
+    background-color: ${Colors.beige20};
+    border: 1px solid ${Colors.gray20};
     border-radius: 4px;
     font-weight: ${Type.fontWeights.medium};
 
     &.ReactSelect__control--is-focused {
-      border-color: ${Colors.brand};
-      box-shadow: 0 0 0 1px ${Colors.brand};
+      border-color: ${Colors.brand20};
+      box-shadow: 0 0 0 1px ${Colors.brand30};
     }
   }
 
   .ReactSelect__menu {
-    background-color: ${Colors.darkGray};
+    background-color: ${Colors.beige20};
   }
 
   .ReactSelect__value-container {
     margin-top: 2px;
     padding: 1px 8px;
     ${Type.body};
-    color: ${Colors.white};
+    color: ${Colors.beige20};
   }
 
   .ReactSelect__single-value {
-    color: ${Colors.white};
+    color: ${Colors.gray10};
   }
 
   .ReactSelect__indicator {
-    color: ${Colors.brand};
+    color: ${Colors.brand30};
     padding: 4px 5px;
   }
 
   .ReactSelect__dropdown-indicator {
-    color: ${Colors.brand};
+    color: ${Colors.gray10};
   }
 
   .ReactSelect__option--is-focused {
-    background-color: ${Colors.brandTranslucent};
+    background-color: ${Colors.brand40};
 
     &:active {
-      background-color: ${Colors.brand};
+      background-color: ${Colors.brand50};
       color: ${Colors.white};
     }
   }
 
   .ReactSelect__option--is-selected {
-    background-color: ${Colors.brand};
+    background-color: ${Colors.brand30};
     color: ${Colors.white};
   }
 
@@ -73,7 +74,7 @@ export const StyledSelect = styled(Select)`
   }
 `
 
-export const StyledChevronDown = styled(Check)`
+export const StyledChevronDown = styled(ChevronDown)`
   width: 10px;
   height: 10px;
   margin: 0 8px;
