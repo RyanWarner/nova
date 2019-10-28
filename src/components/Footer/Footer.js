@@ -10,7 +10,13 @@ export default class Footer extends Component {
         <S.MaxWidth>
           <MadeByYawnch />
           <S.StyledNavLinks />
-          <S.Copyright>MIT Licence</S.Copyright>
+          <S.Copyright
+            href='https://opensource.org/licenses/MIT'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            MIT Licence
+          </S.Copyright>
         </S.MaxWidth>
       </S.FooterComponent>
     )
