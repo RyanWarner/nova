@@ -1,7 +1,7 @@
-import ContactUsModal from '../ContactUsModal/ContactUsModal'
+import SignUpModal from '../SignUpModal/SignUpModal'
 import SuccessModal from '../SuccessModal/SuccessModal'
 
 export default {
-  ContactUsModal,
+  SignUpModal,
   SuccessModal
 }

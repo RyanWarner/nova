@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import * as S from './styles'
-
+import { openModal } from 'app/store/app/actions'
 import { Wordmark, NavLinks } from 'app/components'
 
+@connect(null, { openModal })
 export default class Nav extends Component {
+  handleSignUp = () => {
+    this.props.openModal({ name: 'SignUpModal' })
+  }
+
   render () {
     return (
       <S.NavComponent>
@@ -26,6 +32,7 @@ export default class Nav extends Component {
               theme: 'orange',
               size: 'small'
             }}
+            onClick={this.handleSignUp}
           >
             Sign up
           </S.SignUp>
