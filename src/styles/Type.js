@@ -4,6 +4,7 @@ import { Breakpoints, Colors } from 'app/styles'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
 export const fontFace = `'Open Sans', ${sansSerifFallback}`
+export const monospace = "Menlo, Monaco, 'Courier New', monospace"
 
 export const fontWeights = {
   regular: 400,

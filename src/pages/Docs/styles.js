@@ -21,11 +21,24 @@ export const DocsPage = styled.div`
     line-height: 220%;
   }
 
+  code {
+    background-color: rgba(0, 0, 0, 0.11);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: ${Type.monospace};
+  }
+
   pre {
     background-color: ${Colors.gray10};
     color: ${Colors.beige20};
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 16px 22px;
+    border-radius: 6px;
     line-height: 150%;
+
+    code {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+    }
   }
 `

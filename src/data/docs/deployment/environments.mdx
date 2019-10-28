@@ -1,0 +1,31 @@
+export const meta = {
+  title: 'Environments'
+}
+
+# Environments
+
+For small teams, we recomend 4 environments. 1 local, and 3 deployment environments: `develop`, `staging`, and `production`.
+
+<br />
+
+Each environment has its own `.env` config file located in the top level `config` directory. [View on GitHub](https://github.com/yawnch/nova/tree/master/config).
+
+
+### Example
+
+**.env.production**
+```
+DEPLOY_ENV='production'
+URL='nova.yawnch.com'
+
+S3_BUCKET='my-production-bucket'
+AWS_PROFILE='profile_name'
+
+AMPLITUDE_API_KEY=
+SENTRY_DSN=
+```
+
+| Variable | Description |
+|---|---|
+| S3_BUCKET | The name of the S3 bucket. Used only for deploys from your local machine. |
+| AWS_PROFILE | The name of your machine's local AWS profile. Used only for deploys from your local machine. |

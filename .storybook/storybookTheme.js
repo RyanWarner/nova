@@ -12,7 +12,7 @@ export default create({
   sidebarSvgIconColor: Colors.brand10,
 
   // UI
-  // appBg: Colors.mediumGray,
+  appBg: Colors.beige10,
   appContentBg: Colors.beige20,
   // appBorderColor: Colors.mediumGray,
   appBorderRadius: 6,

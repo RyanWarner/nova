@@ -51,6 +51,7 @@ const docsMap = {
     id: 'deployment',
     Icon: HardDrive,
     pages: [
+      'environments',
       'aws',
       'circle-ci'
     ]
