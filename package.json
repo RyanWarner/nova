@@ -69,6 +69,7 @@
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
     "@babel/register": "7.6.2",
+    "@mdx-js/loader": "^1.5.1",
     "@storybook/addon-docs": "5.2.5",
     "@storybook/react": "5.2.5",
     "@storybook/storybook-deployer": "2.8.1",
