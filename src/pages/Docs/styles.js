@@ -4,9 +4,8 @@ import { Colors, Sizes, Type } from 'app/styles'
 
 export const DocsPage = styled.div`
   margin-left: ${Sizes.sideNavWidth};
-  padding: 30px 50px;
-  max-width: 740px;
-  box-sizing: border-box;
+  padding: 50px 90px;
+  max-width: 720px;
 
   h1 {
     ${Type.header2};
