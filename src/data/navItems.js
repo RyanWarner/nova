@@ -2,7 +2,7 @@ export default {
   0: {
     display: 'Docs',
     type: 'link',
-    url: '/docs'
+    url: '/docs/getting-started/installation'
   },
   1: {
     display: 'GitHub',

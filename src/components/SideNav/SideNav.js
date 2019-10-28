@@ -41,6 +41,8 @@ const docsMap = {
     Icon: Sliders,
     pages: [
       'storybook',
+      'amplitude',
+      'sentry',
       'plop'
     ]
   },

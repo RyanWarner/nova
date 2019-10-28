@@ -18,5 +18,6 @@ export const sun10 = '#6E5F80'
 export const orange10 = '#ce8156'
 export const orange20 = '#de8b5d'
 export const orange30 = '#e89161'
+export const orange40 = '#ffb890'
 
 export const black012 = 'rgba(0, 0, 0, 0.12)'
