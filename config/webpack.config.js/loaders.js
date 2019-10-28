@@ -67,13 +67,23 @@ const eslintLoader = {
   ]
 }
 
+const mdxLoader = {
+  test: /\.mdx?$/,
+  include: paths.src,
+  use: [
+    'babel-loader',
+    '@mdx-js/loader'
+  ]
+}
+
 const client = [{
   oneOf: [
     eslintLoader,
+    mdxLoader,
     babelLoader,
     urlLoaderClient,
     cssLoaderClient,
-    fileLoaderClient
+    fileLoaderClient,
   ]
 }]
 
