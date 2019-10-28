@@ -38,6 +38,7 @@ export const header2 = css`
   font-size: 34px;
   line-height: 152%;
   font-weight: ${fontWeights.semiBold};
+  margin: 0;
 
   @media(max-width: ${Breakpoints.main}) {
     font-size: 26px;
@@ -45,7 +46,7 @@ export const header2 = css`
 `
 
 export const header3 = css`
-  font-size: 23px;
+  font-size: 26px;
   line-height: 152%;
   font-weight: ${fontWeights.semiBold};
 `

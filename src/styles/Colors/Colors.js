@@ -7,6 +7,7 @@ export const beige20 = '#FBF8F8'
 
 export const gray10 = '#292A2E'
 export const gray20 = '#5B5D66'
+export const gray40 = '#4C4C51'
 
 export const sea10 = '#4E7980'
 

@@ -6,7 +6,7 @@ import { Button } from 'app/ui-kit'
 
 export const NavComponent = styled.header`
   height: ${Sizes.navHeight};
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.80);
   width: 100vw;
   display: flex;
   align-items: center;

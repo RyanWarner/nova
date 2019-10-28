@@ -16,6 +16,7 @@ export const Text = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 13px;
+  width: 510px;
 `
 
 export const Description = styled.p`

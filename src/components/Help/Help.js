@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
+import { SlackLogo, VideoPlayer } from 'app/ui-kit/Icons'
 
 export default class Help extends Component {
   render () {
@@ -8,8 +9,13 @@ export default class Help extends Component {
       <S.HelpComponent>
         <S.Title>Need help?</S.Title>
         <S.Description>
-          Subscribe to Yawnch and unlock unlimited access to
+          Purchase a community subscription and unlock unlimited access to
         </S.Description>
+        <S.Features>
+          <S.StyledFeatureCard title='Live chat' icon={<SlackLogo />} />
+          <S.StyledFeatureCard title='Courses' icon={<VideoPlayer />} />
+        </S.Features>
+        <S.StyledHighlightLink text='Learn more' url='https://yawnch.com' />
       </S.HelpComponent>
     )
   }
