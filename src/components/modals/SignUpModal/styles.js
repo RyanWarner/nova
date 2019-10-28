@@ -6,8 +6,6 @@ export const SignUpModalComponent = styled.div`
   padding: 20px 96px;
   width: 520px;
   box-sizing: border-box;
-  background-color: ${Colors.beige20};
-  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
