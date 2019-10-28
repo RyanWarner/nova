@@ -2,7 +2,7 @@
 import { create } from '@storybook/theming'
 
 import { Colors, Type } from 'app/styles'
-// import { logo } from 'app/assets/images'
+import { logo } from 'app/assets/images'
 
 export default create({
   base: Colors.beige10,
@@ -38,5 +38,5 @@ export default create({
 
   brandTitle: 'Yawnch - Nova',
   brandUrl: 'https://yawnch.com',
-  // brandImage: logo,
+  brandImage: logo,
 });
