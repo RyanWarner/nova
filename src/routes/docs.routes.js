@@ -9,14 +9,14 @@ export default [{
     exact: true,
     component: Docs,
     meta: {
-      title: 'Yawnch - Docs',
+      title: 'Nova - Docs',
       description: 'Documentation'
     }
   }, {
     path: '/docs/:section/:doc?',
     component: Docs,
     meta: {
-      title: 'Yawnch - Docs',
+      title: 'YawNovanch - Docs',
       description: 'Documentation'
     }
   }]

@@ -20,7 +20,7 @@ export const Text = styled.div`
   margin-right: auto;
 
   @media(max-width: ${Breakpoints.main}) {
-    margin: -90px 0 70px 0;
+    margin: -100px 0 70px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ export const Title = styled.h1`
   width: 510px;
 
   @media(max-width: ${Breakpoints.main}) {
-    width: 100vw;
+    width: auto;
     text-align: center;
   }
 `
@@ -44,7 +44,7 @@ export const Description = styled.p`
   margin-bottom: 50px;
 
   @media(max-width: ${Breakpoints.main}) {
-    width: 100vw;
+    width: auto;
     max-width: 500px;
     text-align: center;
   }

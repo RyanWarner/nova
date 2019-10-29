@@ -12,6 +12,7 @@ export const gray20 = '#5B5D66'
 export const gray40 = '#4C4C51'
 
 export const sea10 = '#4E7980'
+export const sea30 = '#5F939C'
 
 export const sun10 = '#6E5F80'
 

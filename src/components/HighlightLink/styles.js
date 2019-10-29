@@ -23,7 +23,7 @@ export const Text = styled.p`
     height: 7px;
     left: 0;
     right: 0;
-    background: ${Colors.orange30};
+    background: ${props => Colors[props.color || 'orange40']};
     z-index: -1;
     transition: all 120ms ease-in-out;
   }

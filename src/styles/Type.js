@@ -23,6 +23,11 @@ export const smallBody = css`
 
 export const body30 = css`
   font-size: 20px;
+  line-height: 160%;
+
+  @media(max-width: ${Breakpoints.main}) {
+    font-size: 16px;
+  }
 `
 
 export const header1 = css`
@@ -31,7 +36,7 @@ export const header1 = css`
   font-weight: ${fontWeights.bold};
 
   @media(max-width: ${Breakpoints.main}) {
-    font-size: 32px;
+    font-size: 30px;
   }
 `
 

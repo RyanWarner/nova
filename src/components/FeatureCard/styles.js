@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors, Type } from 'app/styles'
+import { Breakpoints, Colors, Type } from 'app/styles'
 
 export const FeatureCardComponent = styled.div`
   background-color: ${Colors.gray40};
@@ -10,6 +10,11 @@ export const FeatureCardComponent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: ${Breakpoints.main}) {
+    width: 164px;
+    height: 64px;
+  }
 `
 
 export const Title = styled.p`
@@ -17,4 +22,8 @@ export const Title = styled.p`
   color: ${Colors.beige20};
   font-weight: ${Type.fontWeights.semiBold};
   margin-left: 10px;
+
+  @media(max-width: ${Breakpoints.main}) {
+    font-size: 16px;
+  }
 `

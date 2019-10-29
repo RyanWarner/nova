@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 
 import { Colors } from 'app/styles'
 
-export const NavLinksComponent = styled.div``
+export const NavLinksComponent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
 
 const navItemShared = css`
   margin-right: 26px;

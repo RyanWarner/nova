@@ -22,6 +22,12 @@ export const Grid = styled.div`
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 50px;
   }
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0;
+  }
 `
 
 export const Title = styled.h3`

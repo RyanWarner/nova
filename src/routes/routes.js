@@ -22,7 +22,7 @@ export default [{
         exact: true,
         component: Faq,
         meta: {
-          title: 'Yawnch - FAQ',
+          title: 'Nova - FAQ',
           description: 'Frequently asked questions'
         }
       }, {
@@ -30,22 +30,14 @@ export default [{
         exact: true,
         component: Privacy,
         meta: {
-          title: 'Yawnch - Privacy Policy',
+          title: 'Nova - Privacy Policy',
           description: 'Privacy policy'
-        }
-      }, {
-        path: '/terms',
-        exact: true,
-        component: Terms,
-        meta: {
-          title: 'Yawnch - Terms',
-          description: 'Terms of service'
         }
       }, {
         path: '*',
         component: NotFound,
         meta: {
-          title: 'Yawnch - Not found',
+          title: 'Nova - Not found',
           description: 'An opinionated starting point for web applications.'
         }
       }]

@@ -15,7 +15,11 @@ export default class Help extends Component {
           <S.StyledFeatureCard title='Live chat' icon={<SlackLogo />} />
           <S.StyledFeatureCard title='Courses' icon={<VideoPlayer />} />
         </S.Features>
-        <S.StyledHighlightLink text='Learn more' url='https://yawnch.com' />
+        <S.StyledHighlightLink
+          text='Learn more'
+          url='https://yawnch.com'
+          color='sea10'
+        />
       </S.HelpComponent>
     )
   }
