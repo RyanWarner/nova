@@ -1,10 +1,10 @@
 # Nova
 
-### ⭐ [Live Demo](https://nova.yawnch.com)
-
-### 📖 [Storybook](https://yawnch.github.io/nova)
-
 Open source, feature rich React boilerplate used to kickstart production ready web apps.
+
+#### 🚀 Launch web apps faster
+#### ⭐ [Live Demo](https://nova.yawnch.com)
+#### 📖 [Storybook](https://yawnch.github.io/nova)
 
 ## Getting Started
 
@@ -38,7 +38,7 @@ npm run deploy:production
 
 ## Plop
 
-You can use plop to scaffold new components automatically.
+You can use [Plop](https://plopjs.com/) to scaffold new components automatically.
 
 ```
 npx plop Component
@@ -55,6 +55,7 @@ npx plop Page
 - [Babel](https://babeljs.io/)
 - [Webpack](https://webpack.js.org/)
 - [Plop](https://plopjs.com/)
+- [CircleCI](https://circleci.com)
 
 ## Coding Style
 
