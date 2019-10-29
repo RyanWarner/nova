@@ -26,6 +26,7 @@ jspm_packages
 
 # build files
 dist/
+storybook-static/
 
 .DS_Store
 
