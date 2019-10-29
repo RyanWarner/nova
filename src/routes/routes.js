@@ -1,5 +1,5 @@
 import { Root, AppRoot } from 'app/components'
-import { Home, Faq, Privacy, Terms, NotFound } from 'app/pages'
+import { Home, Faq, Privacy, NotFound } from 'app/pages'
 import docsRoutes from './docs.routes'
 
 export default [{

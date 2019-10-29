@@ -16,7 +16,7 @@ export default [{
     path: '/docs/:section/:doc?',
     component: Docs,
     meta: {
-      title: 'YawNovanch - Docs',
+      title: 'Nova - Docs',
       description: 'Documentation'
     }
   }]
