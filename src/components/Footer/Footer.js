@@ -15,7 +15,7 @@ export default class Footer extends Component {
             target='_blank'
             rel='noreferrer noopener'
           >
-            MIT Licence
+            MIT License
           </S.Copyright>
         </S.MaxWidth>
       </S.FooterComponent>
