@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
-import { MadeByYawnch } from 'app/components'
+import MadeByYawnch from '../MadeByYawnch/MadeByYawnch'
 
 export default class Footer extends Component {
   render () {

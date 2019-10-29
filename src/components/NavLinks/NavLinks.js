@@ -16,6 +16,8 @@ const A = ({ item }) =>
 export default props =>
   <S.NavLinksComponent {...props}>
     {Object.values(navItems).map(item =>
-      item.type === 'link' ? <Link item={item} /> : <A item={item} />
+      item.type === 'link'
+        ? <Link item={item} key={item.url} />
+        : <A item={item} key={item.url} />
     )}
   </S.NavLinksComponent>

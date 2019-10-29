@@ -21,7 +21,7 @@ const browserHistory = createHistory()
 const persistedState = loadState()
 const initialState = persistedState
 
-const store = configureStore({
+export const store = configureStore({
   initialState,
   middleware: [routerMiddleware(browserHistory)]
 })
