@@ -2,6 +2,8 @@
 
 ### ⭐ [Live Demo](https://nova.yawnch.com)
 
+### 📖 [Storybook](https://yawnch.github.io/nova)
+
 An opinionated starting point for Single Page Applications.
 
 ## Getting Started

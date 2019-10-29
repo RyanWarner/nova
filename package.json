@@ -19,7 +19,7 @@
     "lint:fix": "eslint src/** --fix",
     "storybook": "start-storybook -s .storybook/images",
     "build-storybook": "build-storybook -s .storybook/images",
-    "storybook:deploy": "storybook-to-ghpages"
+    "deploy:storybook": "storybook-to-ghpages"
   },
   "moduleRoots": [
     "src",
