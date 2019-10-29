@@ -18,4 +18,5 @@ export const Title = styled.div`
 
 export const Description = styled.p`
   color: ${Colors.gray20};
+  font-size: 12px;
 `

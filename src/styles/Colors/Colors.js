@@ -21,5 +21,7 @@ export const orange30 = '#e89161'
 export const orange40 = '#ffb890'
 
 export const black012 = 'rgba(0, 0, 0, 0.12)'
+export const white080 = 'rgba(255, 255, 255, 0.80)'
+export const white060 = 'rgba(255, 255, 255, 0.60)'
 
 export const error = '#C74343'

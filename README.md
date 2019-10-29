@@ -4,7 +4,7 @@
 
 ### 📖 [Storybook](https://yawnch.github.io/nova)
 
-An opinionated starting point for Single Page Applications.
+Open source, feature rich React boilerplate used to kickstart production ready web apps.
 
 ## Getting Started
 
@@ -61,3 +61,7 @@ npx plop Page
 [Standard](https://standardjs.com/)
 
 Coding style is enforced using ESLint. You can also manually run the linter using `npm run lint:fix`.
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)

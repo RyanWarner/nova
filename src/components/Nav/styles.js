@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { Breakpoints, Sizes } from 'app/styles'
+import { Breakpoints, Colors, Sizes } from 'app/styles'
 import { Button } from 'app/ui-kit'
 
 export const NavComponent = styled.header`
   height: ${Sizes.navHeight};
-  background-color: rgba(255, 255, 255, 0.80);
+  background-color: ${Colors.white080};
   width: 100vw;
   display: flex;
   align-items: center;

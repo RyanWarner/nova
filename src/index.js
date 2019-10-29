@@ -27,8 +27,12 @@ export const store = configureStore({
 })
 
 store.subscribe(() => {
-  const state = {
+  const currentState = store.getState()
 
+  const state = {
+    api: {
+      currentUser: currentState.api?.currentUser
+    }
   }
   saveState(state)
 })

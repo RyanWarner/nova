@@ -4,5 +4,6 @@ import * as S from './styles'
 
 export default ({ text, icon, ...rest }) =>
   <S.HighlightLinkComponent {...rest}>
-    {text}
+    <S.Text>{text}</S.Text>
+    <S.Arrow />
   </S.HighlightLinkComponent>

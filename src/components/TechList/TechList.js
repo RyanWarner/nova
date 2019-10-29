@@ -12,5 +12,9 @@ export default props =>
         <Tech data={item} key={item.display} />
       )}
     </S.Grid>
-    <S.StyledHighlightLink text='Read more' icon='rightArrow' href='/docs/getting-started/installation' />
+    <S.StyledHighlightLink
+      text='Read more'
+      icon='rightArrow'
+      href='/docs/getting-started/installation'
+    />
   </S.TechListComponent>

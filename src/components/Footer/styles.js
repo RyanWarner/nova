@@ -30,7 +30,7 @@ export const MaxWidth = styled.div`
   }
 `
 
-export const Copyright = styled.div`
+export const Copyright = styled.a`
   color: ${Colors.gray20};
   font-size: 14px;
   width: 200px;
@@ -38,12 +38,16 @@ export const Copyright = styled.div`
 
   @media(max-width: ${Breakpoints.main}) {
     margin-left: 0;
-    margin-top: 18px;
+    margin-top: 28px;
     text-align: center;
     font-size: 14px;
     text-align: left;
+    opacity: 0.7;
   }
 `
 
 export const StyledNavLinks = styled(NavLinks)`
+  @media(max-width: ${Breakpoints.main}) {
+    margin-top: 28px;
+  }
 `

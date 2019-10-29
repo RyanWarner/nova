@@ -52,11 +52,35 @@ export default {
     url: '/docs',
     icon: <Redux />
   },
+  webpack: {
+    display: 'Webpack',
+    description: '',
+    url: '/docs',
+    icon: <Webpack />
+  },
+  sentry: {
+    display: 'Sentry',
+    description: 'Error reporting',
+    url: '/docs',
+    icon: <Sentry />
+  },
   reactRouter: {
     display: 'React Router',
     description: 'Declarative routing for React',
     url: '/docs',
     icon: <ReactRouter />
+  },
+  babel: {
+    display: 'Babel',
+    description: 'JavaScript from the future',
+    url: '/docs',
+    icon: <BabelLogo src={babelLogo} />
+  },
+  aws: {
+    display: 'Amazon Web Services',
+    description: 'Hosting, DNS, CDN',
+    url: '/docs',
+    icon: <Aws />
   },
   cypress: {
     display: 'Testing',
@@ -65,35 +89,11 @@ export default {
     icon: <Cypress />,
     comingSoon: true
   },
-  webpack: {
-    display: 'Webpack',
-    description: '',
-    url: '/docs',
-    icon: <Webpack />
-  },
-  babel: {
-    display: 'Babel',
-    description: 'JavaScript from the future',
-    url: '/docs',
-    icon: <BabelLogo src={babelLogo} />
-  },
   storybook: {
     display: 'Storybook',
-    description: 'Component driven development & docs',
+    description: 'Component driven development',
     url: '/docs',
     icon: <Storybook />
-  },
-  sentry: {
-    display: 'Sentry',
-    description: 'Error reporting',
-    url: '/docs',
-    icon: <Sentry />
-  },
-  aws: {
-    display: 'Amazon Web Services',
-    description: 'Hosting, DNS, CDN',
-    url: '/docs',
-    icon: <Aws />
   },
   circleci: {
     display: 'CircleCI',
