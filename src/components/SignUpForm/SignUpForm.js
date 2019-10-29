@@ -4,7 +4,7 @@ import { withFormState } from 'informed'
 import * as S from './styles'
 import { authFields as fields } from 'app/data'
 import { Button, TextField } from 'app/ui-kit'
-import { withInformed } from 'app/components'
+import withInformed from '../withInformed/withInformed'
 
 @withInformed
 @withFormState

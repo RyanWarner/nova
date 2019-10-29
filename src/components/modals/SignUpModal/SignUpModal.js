@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
-import { SignUpForm } from 'app/components'
+import SignUpForm from '../../SignUpForm/SignUpForm'
 
 export default class SignUpModal extends Component {
   render () {
