@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import * as S from './styles'
-import { Nova } from 'app/components'
 
 export default class Hero extends Component {
   render () {
@@ -17,7 +16,7 @@ export default class Hero extends Component {
             <S.StyledButton>Explore</S.StyledButton>
           </Link>
         </S.Text>
-        <Nova />
+        <S.StyledNova />
       </S.HeroComponent>
     )
   }

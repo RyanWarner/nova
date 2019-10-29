@@ -12,7 +12,8 @@ export const FooterComponent = styled.footer`
   box-sizing: border-box;
 
   @media(max-width: ${Breakpoints.main}) {
-    padding: 100px ${Sizes.xAppPaddingMobile} 0 ${Sizes.xAppPaddingMobile};
+    justify-content: flex-start;
+    padding: 46px ${Sizes.xAppPaddingMobile};
   }
 `
 
@@ -24,7 +25,8 @@ export const MaxWidth = styled.div`
   justify-content: space-between;
 
   @media(max-width: ${Breakpoints.main}) {
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 `
 
@@ -36,8 +38,10 @@ export const Copyright = styled.div`
 
   @media(max-width: ${Breakpoints.main}) {
     margin-left: 0;
+    margin-top: 18px;
     text-align: center;
     font-size: 14px;
+    text-align: left;
   }
 `
 

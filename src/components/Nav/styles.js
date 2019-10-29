@@ -20,8 +20,7 @@ export const NavComponent = styled.header`
   backdrop-filter: blur(5px);
 
   @media(max-width: ${Breakpoints.main}) {
-    padding: 0 20px;
-    height: 60px;
+    display: none;
   }
 `
 
