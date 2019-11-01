@@ -35,7 +35,7 @@
     "focus-visible": "^5.0.2",
     "history": "4.10.1",
     "hoist-non-react-statics": "3.3.0",
-    "informed": "2.11.10",
+    "informed": "2.11.11",
     "lodash": "4.17.15",
     "react": "16.11.0",
     "react-aria-modal": "4.0.0",
@@ -53,7 +53,7 @@
     "redux": "4.0.4",
     "redux-logger": "3.0.6",
     "redux-thunk": "2.3.0",
-    "styled-components": "4.4.0"
+    "styled-components": "4.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.6.4",
@@ -82,7 +82,7 @@
     "babel-plugin-styled-components": "1.10.6",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chalk": "2.4.2",
-    "core-js": "3.3.5",
+    "core-js": "3.3.6",
     "cross-env": "6.0.3",
     "css-loader": "3.2.0",
     "dotenv-webpack": "1.7.0",
@@ -112,7 +112,7 @@
     "url-loader": "2.2.0",
     "webpack": "4.41.2",
     "webpack-bundle-analyzer": "3.6.0",
-    "webpack-cli": "3.3.9",
+    "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.9.0",
     "webpack-node-externals": "1.7.2",
     "write-file-webpack-plugin": "4.5.1"
