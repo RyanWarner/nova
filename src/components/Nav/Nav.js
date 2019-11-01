@@ -11,6 +11,10 @@ export default class Nav extends Component {
     this.props.openModal({ name: 'SignUpModal' })
   }
 
+  handleLogIn = () => {
+    this.props.openModal({ name: 'LogInModal' })
+  }
+
   render () {
     return (
       <S.NavComponent>
@@ -24,6 +28,7 @@ export default class Nav extends Component {
               theme: 'text',
               size: 'small'
             }}
+            onClick={this.handleLogIn}
           >
             Log in
           </S.LogIn>
