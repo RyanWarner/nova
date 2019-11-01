@@ -46,6 +46,7 @@ export default class ModalController extends Component {
     const { modalHasEntered } = this.state
     const modalName = activeModal?.name
     const modalState = activeModal?.modalState
+    const animation = activeModal?.animation
 
     let modalClass = 'Aria-modal'
     let underlayClass = 'Aria-underlay'
@@ -72,7 +73,7 @@ export default class ModalController extends Component {
 
     return (
       <S.OverlayWrap>
-        <S.GlobalModalStyle />
+        <S.GlobalModalStyle animation={animation} />
         <AriaModal {...modalOptions} {...modalState}>
           {activeModal &&
             <div className={modalClass}>

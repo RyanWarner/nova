@@ -7,12 +7,11 @@ export const SuccessModalComponent = styled.div`
   padding: 24px 44px;
   width: 753px;
   box-sizing: border-box;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${Colors.white090};
-  backdrop-filter: blur(5px);
+  background: ${Colors.beige10};
 
   @media(max-width: ${Breakpoints.main}){
     width: 90vw;
