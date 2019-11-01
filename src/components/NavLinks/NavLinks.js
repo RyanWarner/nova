@@ -3,21 +3,21 @@ import React from 'react'
 import * as S from './styles'
 import { navItems } from 'app/data'
 
-const Link = ({ item }) =>
-  <S.NavLink to={item.url} key={item.display}>
+const Link = ({ item, style }) =>
+  <S.NavLink to={item.url} key={item.display} styled={style}>
     {item.display}
   </S.NavLink>
 
-const A = ({ item }) =>
-  <S.A href={item.url} key={item.display}>
+const A = ({ item, style }) =>
+  <S.A href={item.url} key={item.display} styled={style}>
     {item.display}
   </S.A>
 
-export default props =>
-  <S.NavLinksComponent {...props}>
+export default ({ linkStyle, ...rest }) =>
+  <S.NavLinksComponent {...rest}>
     {Object.values(navItems).map(item =>
       item.type === 'link'
-        ? <Link item={item} key={item.url} />
-        : <A item={item} key={item.url} />
+        ? <Link item={item} key={item.url} style={linkStyle} />
+        : <A item={item} key={item.url} style={linkStyle} />
     )}
   </S.NavLinksComponent>

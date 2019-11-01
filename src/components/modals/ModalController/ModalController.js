@@ -7,6 +7,12 @@ import Modals from './ModalList'
 export default class ModalController extends Component {
   state = {}
 
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.onModalExit()
+    }
+  }
+
   closeModal = () => {
     if (this.onRequestClose) this.onRequestClose()
     this.props.closeAllModals()
@@ -40,6 +46,7 @@ export default class ModalController extends Component {
     const { modalHasEntered } = this.state
     const modalName = activeModal?.name
     const modalState = activeModal?.modalState
+    const animation = activeModal?.animation
 
     let modalClass = 'Aria-modal'
     let underlayClass = 'Aria-underlay'
@@ -54,7 +61,7 @@ export default class ModalController extends Component {
       closeTimeoutMS: 250,
       underlayClass,
       titleText: modalName,
-      focusModal: true, // TODO: fix auto focus
+      focusModal: true,
       onEnter: this.onModalEnter
     }
 
@@ -66,7 +73,7 @@ export default class ModalController extends Component {
 
     return (
       <S.OverlayWrap>
-        <S.GlobalModalStyle />
+        <S.GlobalModalStyle animation={animation} />
         <AriaModal {...modalOptions} {...modalState}>
           {activeModal &&
             <div className={modalClass}>

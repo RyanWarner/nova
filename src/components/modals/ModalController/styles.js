@@ -1,6 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { css, createGlobalStyle } from 'styled-components'
 
-import { Colors } from 'app/styles'
 import { X } from 'react-feather'
 
 export const OverlayWrap = styled.div``
@@ -23,15 +22,25 @@ export const GlobalModalStyle = createGlobalStyle`
   .Aria-modal {
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
-    transition: opacity 300ms ease, transform 300ms ease;
+    transition: all 250ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
     transform: translate(0, -50px);
     opacity: 0.3;
-    background-color: ${Colors.beige20};
 
     &.has-entered {
       opacity: 1;
-      transform: translate(0, 0px);
+      transform: translate(0, 0);
     }
+
+    ${props => props.animation === 'fadeScale' && css`
+      transform: scale(0.6);
+      opacity: 0;
+
+      &.has-entered {
+        opacity: 1;
+        transform: scale(1);
+      }
+    `}
   }
 
   .Aria-underlay {

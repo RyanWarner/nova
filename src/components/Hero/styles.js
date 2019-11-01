@@ -18,9 +18,10 @@ export const HeroComponent = styled.div`
 
 export const Text = styled.div`
   margin-right: auto;
+  z-index: 2;
 
   @media(max-width: ${Breakpoints.main}) {
-    margin: -100px 0 70px 0;
+    margin: -100px 0 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,13 +48,10 @@ export const Description = styled.p`
     width: auto;
     max-width: 500px;
     text-align: center;
+    margin-bottom: 30px;
   }
 `
 
 export const StyledButton = styled(Button)``
 
-export const StyledNova = styled(Nova)`
-  @media(max-width: ${Breakpoints.main}) {
-    /* transform: scale(0.8); */
-  }
-`
+export const StyledNova = styled(Nova)``

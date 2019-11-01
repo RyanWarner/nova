@@ -25,8 +25,8 @@ export const NovaComponent = styled.div`
   @media(max-width: ${Breakpoints.main}) {
     width: ${sizes.small.space};
     height: ${sizes.small.space};
-    margin-top: -160px;
-    margin-left: -235px;
+    margin-top: -170px;
+    margin-left: -245px;
   }
 `
 

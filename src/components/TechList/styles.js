@@ -33,6 +33,9 @@ export const Grid = styled.div`
 export const Title = styled.h3`
   color: ${Colors.gray20};
   margin: 70px 0 55px 0;
+
+  @media(max-width: ${Breakpoints.main}) {
+    margin: 50px 0 40px 0;
 `
 
 export const StyledHighlightLink = styled(HighlightLink)`

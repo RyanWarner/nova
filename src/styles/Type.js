@@ -36,7 +36,7 @@ export const header1 = css`
   font-weight: ${fontWeights.bold};
 
   @media(max-width: ${Breakpoints.main}) {
-    font-size: 30px;
+    font-size: 26px;
   }
 `
 
@@ -55,6 +55,10 @@ export const header3 = css`
   font-size: 26px;
   line-height: 152%;
   font-weight: ${fontWeights.semiBold};
+
+  @media(max-width: ${Breakpoints.main}) {
+    font-size: 20px;
+  }
 `
 
 export const GlobalStyle = createGlobalStyle`
