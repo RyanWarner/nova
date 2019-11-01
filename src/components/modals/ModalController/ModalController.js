@@ -7,6 +7,12 @@ import Modals from './ModalList'
 export default class ModalController extends Component {
   state = {}
 
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.onModalExit()
+    }
+  }
+
   closeModal = () => {
     if (this.onRequestClose) this.onRequestClose()
     this.props.closeAllModals()
@@ -54,7 +60,7 @@ export default class ModalController extends Component {
       closeTimeoutMS: 250,
       underlayClass,
       titleText: modalName,
-      focusModal: true, // TODO: fix auto focus
+      focusModal: true,
       onEnter: this.onModalEnter
     }
 

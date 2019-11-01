@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-import { Colors } from 'app/styles'
 import { X } from 'react-feather'
 
 export const OverlayWrap = styled.div``
@@ -26,7 +25,6 @@ export const GlobalModalStyle = createGlobalStyle`
     transition: opacity 300ms ease, transform 300ms ease;
     transform: translate(0, -50px);
     opacity: 0.3;
-    background-color: ${Colors.beige20};
 
     &.has-entered {
       opacity: 1;
