@@ -14,10 +14,8 @@ export default class SignUpForm extends Component {
   }
 
   submit = () => {
-    const { formState } = this.props
-    const { email, password } = formState
-    console.log('email', email)
-    console.log('password', password)
+    // const { formState } = this.props
+    // const { email, password } = formState
   }
 
   render () {

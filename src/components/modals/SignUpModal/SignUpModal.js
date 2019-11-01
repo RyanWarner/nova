@@ -8,6 +8,9 @@ export default class SignUpModal extends Component {
     return (
       <S.SignUpModalComponent>
         <S.Title>Sign Up</S.Title>
+        <S.Description>
+          This is for demonstration purposes only. No information is stored.
+        </S.Description>
         <SignUpForm />
       </S.SignUpModalComponent>
     )
