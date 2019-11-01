@@ -10,6 +10,7 @@ export const SignUpModalComponent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: ${Colors.beige20};
 
   @media(max-width: ${Breakpoints.main}) {
     width: 100vw;
