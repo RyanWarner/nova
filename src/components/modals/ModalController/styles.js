@@ -1,6 +1,7 @@
 import styled, { css, createGlobalStyle } from 'styled-components'
-
 import { X } from 'react-feather'
+
+import { Sizes } from 'app/styles'
 
 export const OverlayWrap = styled.div``
 export const CloseX = styled(X)`
@@ -24,12 +25,12 @@ export const GlobalModalStyle = createGlobalStyle`
     overflow: hidden;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
     transition: all 250ms ease-in-out;
-    transform: translate(0, -50px);
+    transform: translate3d(0, -50px, 0);
     opacity: 0.3;
 
     &.has-entered {
       opacity: 1;
-      transform: translate(0, 0);
+      transform: translate3d(0, 0, 0);
     }
 
     ${props => props.animation === 'fadeScale' && css`
@@ -39,6 +40,19 @@ export const GlobalModalStyle = createGlobalStyle`
       &.has-entered {
         opacity: 1;
         transform: scale(1);
+      }
+    `}
+
+    ${props => props.animation === 'sideNav' && css`
+      transform: translate3d(${Sizes.sideNavWidth}, 0, 0);
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &.has-entered {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
       }
     `}
   }
@@ -54,3 +68,9 @@ export const GlobalModalStyle = createGlobalStyle`
     }
   }
 `
+
+export const sideNavUnderlayStyle = {
+  textAlign: 'right',
+  padding: 0,
+  overflow: 'initial'
+}

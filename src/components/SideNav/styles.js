@@ -9,14 +9,14 @@ const xPadding = '18px'
 export const SideNavComponent = styled.div`
   width: ${Sizes.sideNavWidth};
   background: linear-gradient(${Colors.beige20}, rgba(251, 248, 248, 0.35));
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
 `
 
 export const StyledWordmark = styled(Wordmark)`
-  margin: 40px ${xPadding};
+  padding: 40px ${xPadding};
 `
 
 export const NavItemWrap = styled.div`
