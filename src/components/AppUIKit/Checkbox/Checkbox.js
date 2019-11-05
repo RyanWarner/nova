@@ -31,7 +31,7 @@ export default asField(({ fieldState, fieldApi, ...props }) => {
           />
           <S.StyledCheck />
         </S.CheckboxWrap>
-        {label && <S.Label htmlFor={field}>{label}</S.Label>}
+        {label && <S.Label for={field}>{label}</S.Label>}
       </S.CheckboxAndLabel>
       <S.ErrorLabel>{error}</S.ErrorLabel>
     </S.CheckboxComponent>

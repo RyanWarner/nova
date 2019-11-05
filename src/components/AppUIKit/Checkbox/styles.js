@@ -22,6 +22,7 @@ export const CheckboxWrap = styled.div`
 
 export const CheckboxAndLabel = styled.div`
   display: flex;
+  align-items: center;
 `
 
 export const StyledCheck = styled(Check)`
@@ -46,7 +47,10 @@ export const StyledCheckbox = styled.input`
   }
 `
 
-export const Label = styled.div``
+export const Label = styled.label`
+  margin-left: 10px;
+`
+
 export const ErrorLabel = styled.div`
   ${Type.smallBody}
   color: ${Colors.error};

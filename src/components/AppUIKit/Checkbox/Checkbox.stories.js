@@ -7,5 +7,8 @@ export default {
 }
 
 export const basic = () => (
-  <Checkbox />
+  <Checkbox
+    field='fieldId'
+    label='Checkbox label'
+  />
 )
