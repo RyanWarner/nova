@@ -21,6 +21,7 @@ export const Grid = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 50px;
+    max-width: 760px;
   }
 
   @media(max-width: ${Breakpoints.mobile}) {
