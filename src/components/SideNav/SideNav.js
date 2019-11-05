@@ -8,10 +8,11 @@ import { Colors } from 'app/styles'
 @withRouter
 export default class SideNav extends Component {
   render () {
-    const { pathname } = this.props.location
+    const { location, options } = this.props
+    const { pathname } = location
 
     return (
-      <S.SideNavComponent>
+      <S.SideNavComponent options={options}>
         <Link to='/'>
           <S.StyledWordmark />
         </Link>

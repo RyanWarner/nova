@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
-import { Colors, Sizes, Type } from 'app/styles'
+import { Breakpoints, Colors, Sizes, Type } from 'app/styles'
 
 export const DocsPage = styled.div`
   margin-left: ${Sizes.sideNavWidth};
   padding: 50px 90px;
   max-width: 720px;
+
+  @media(max-width: ${Breakpoints.main}) {
+    margin-left: 0;
+    padding: 30px ${Sizes.xAppPaddingMobile};
+    max-width: 100vw;
+  }
 
   h1 {
     ${Type.header2};
