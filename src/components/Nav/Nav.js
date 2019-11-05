@@ -12,8 +12,7 @@ export default class Nav extends Component {
   }
 
   handleLogIn = () => {
-    // this.props.openModal({ name: 'LogInModal' })
-    this.props.openModal({ name: 'SideNav', animation: 'sideNav' })
+    this.props.openModal({ name: 'LogInModal' })
   }
 
   render () {

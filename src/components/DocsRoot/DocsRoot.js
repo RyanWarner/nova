@@ -3,6 +3,7 @@ import { renderRoutes } from 'react-router-config'
 
 import * as S from './styles'
 import SideNav from '../SideNav/SideNav'
+import MobileNav from '../MobileNav/MobileNav'
 
 export default class AppRoot extends Component {
   render () {
@@ -10,6 +11,7 @@ export default class AppRoot extends Component {
     return (
       <S.AppRootComponent>
         <SideNav />
+        <MobileNav nav='docs' />
         {renderRoutes(route.routes)}
       </S.AppRootComponent>
     )

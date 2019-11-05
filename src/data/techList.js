@@ -54,7 +54,7 @@ export default {
   },
   webpack: {
     display: 'Webpack',
-    description: '',
+    description: 'Module bundler',
     url: '/docs',
     icon: <Webpack />
   },

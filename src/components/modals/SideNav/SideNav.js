@@ -7,7 +7,7 @@ export default class SideNavModal extends Component {
   render () {
     return (
       <S.SuccessModalComponent>
-        <SideNav />
+        <SideNav options={{ mobile: true }} />
       </S.SuccessModalComponent>
     )
   }

@@ -7,7 +7,15 @@ import { openModal } from 'app/store/app/actions'
 @connect(null, { openModal })
 export default class MobileNav extends Component {
   handleMenuClick = () => {
-    this.props.openModal({ name: 'MobileNav', animation: 'fadeScale' })
+    const { nav, openModal } = this.props
+
+    const navs = {
+      main: { name: 'MobileNav', animation: 'fadeScale' },
+      docs: { name: 'SideNav', animation: 'sideNav' }
+    }
+    const modal = navs[nav || 'main']
+
+    openModal(modal)
   }
 
   render () {

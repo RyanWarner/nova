@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { Colors, Sizes, Type } from 'app/styles'
+import { Breakpoints, Colors, Sizes, Type } from 'app/styles'
 import Wordmark from '../Wordmark/Wordmark'
 
 const xPadding = '18px'
@@ -9,10 +9,16 @@ const xPadding = '18px'
 export const SideNavComponent = styled.div`
   width: ${Sizes.sideNavWidth};
   background: linear-gradient(${Colors.beige20}, rgba(251, 248, 248, 0.35));
-  min-height: 100vh;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
+
+  @media(max-width: ${Breakpoints.main}) {
+    display: ${props => props.options?.mobile ? 'block' : 'none'};
+    background: linear-gradient(${Colors.beige20}, rgba(251, 248, 248, 0.85));
+  }
 `
 
 export const StyledWordmark = styled(Wordmark)`
@@ -32,17 +38,17 @@ export const NavItem = styled(Link)`
   padding: 3px 0;
 
   &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -1px;
-      height: 0px;
-      left: -2px;
-      right: -2px;
-      background: transparent;
-      z-index: -1;
-      transition: all 170ms ease-in-out;
-    }
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    height: 0px;
+    left: -2px;
+    right: -2px;
+    background: transparent;
+    z-index: -1;
+    transition: all 170ms ease-in-out;
+  }
 
   ${props => props.selected && css`
     color: ${Colors.gray10};
