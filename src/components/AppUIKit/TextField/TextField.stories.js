@@ -12,6 +12,7 @@ export const basic = () => (
     <TextField
       field='name'
       label='Name'
+      placeholder='Your name here'
     />
   </Form>
 )
