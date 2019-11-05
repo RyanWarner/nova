@@ -49,6 +49,7 @@ export const GlobalModalStyle = createGlobalStyle`
       position: absolute;
       top: 0;
       right: 0;
+      border-radius: 10px 0 0 10px;
 
       &.has-entered {
         opacity: 1;

@@ -14,6 +14,8 @@ export const SideNavComponent = styled.div`
   top: 0;
   left: 0;
   overflow-y: scroll;
+  padding-bottom: 60px;
+  box-sizing: border-box;
 
   @media(max-width: ${Breakpoints.main}) {
     display: ${props => props.options?.mobile ? 'block' : 'none'};

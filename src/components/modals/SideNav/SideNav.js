@@ -6,9 +6,9 @@ import { SideNav } from 'app/components'
 export default class SideNavModal extends Component {
   render () {
     return (
-      <S.SuccessModalComponent>
+      <S.SideNavModalComponent>
         <SideNav options={{ mobile: true }} />
-      </S.SuccessModalComponent>
+      </S.SideNavModalComponent>
     )
   }
 }
