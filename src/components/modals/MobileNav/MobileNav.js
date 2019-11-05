@@ -5,9 +5,9 @@ import * as S from './styles'
 export default class MobileNav extends Component {
   render () {
     return (
-      <S.SuccessModalComponent>
+      <S.MobileNavComponent>
         <S.StyledNavLinks linkStyle={S.linkStyle} />
-      </S.SuccessModalComponent>
+      </S.MobileNavComponent>
     )
   }
 }

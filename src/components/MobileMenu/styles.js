@@ -3,7 +3,7 @@ import { Menu } from 'react-feather'
 
 import { Breakpoints, Colors } from 'app/styles'
 
-export const MobileNavComponent = styled.div`
+export const MobileMenuComponent = styled.div`
   position: fixed;
   width: 55px;
   height: 55px;

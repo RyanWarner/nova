@@ -5,7 +5,7 @@ import * as S from './styles'
 import { openModal } from 'app/store/app/actions'
 
 @connect(null, { openModal })
-export default class MobileNav extends Component {
+export default class MobileMenu extends Component {
   handleMenuClick = () => {
     const { nav, openModal } = this.props
 
@@ -20,9 +20,9 @@ export default class MobileNav extends Component {
 
   render () {
     return (
-      <S.MobileNavComponent onClick={this.handleMenuClick}>
+      <S.MobileMenuComponent onClick={this.handleMenuClick}>
         <S.StyledMenu />
-      </S.MobileNavComponent>
+      </S.MobileMenuComponent>
     )
   }
 }
