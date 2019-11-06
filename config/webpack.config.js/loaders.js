@@ -71,6 +71,7 @@ const eslintLoader = {
 const mdxLoader = {
   test: /\.mdx?$/,
   include: paths.src,
+  exclude: [/\.stories\./],
   use: [
     'babel-loader',
     '@mdx-js/loader'

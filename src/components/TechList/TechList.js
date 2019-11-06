@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as S from './styles'
 import { techList } from 'app/data'
-import { Tech } from 'app/components'
+import Tech from '../Tech/Tech'
 
 export default props =>
   <S.TechListComponent {...props}>

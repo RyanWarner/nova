@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
-import { SideNav } from 'app/components'
+import SideNav from '../../SideNav/SideNav'
 
 export default class SideNavModal extends Component {
   render () {

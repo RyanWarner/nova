@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import * as S from './styles'
 import { openModal } from 'app/store/app/actions'
-import { Wordmark, NavLinks } from 'app/components'
+import { Wordmark, NavLinks } from '../'
 
 @connect(null, { openModal })
 export default class Nav extends Component {
