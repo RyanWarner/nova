@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import { MDXProvider } from '@mdx-js/react'
 
 import * as S from './styles'
 import docs from 'app/data/docs'
+import CodeBlock from './CodeBlock'
+
+const components = {
+  pre: props => <div {...props} />,
+  code: CodeBlock
+}
 
 @withRouter
 export default class Docs extends Component {
@@ -13,7 +20,9 @@ export default class Docs extends Component {
 
     return (
       <S.DocsPage>
-        <MDXDocument />
+        <MDXProvider components={components}>
+          <MDXDocument />
+        </MDXProvider>
       </S.DocsPage>
     )
   }

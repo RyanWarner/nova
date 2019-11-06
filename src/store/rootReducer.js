@@ -3,7 +3,7 @@ import { connectRouter } from 'connected-react-router'
 import createHistory from './history'
 import app from './app/reducer'
 import api from './api/reducer'
-import loading from './loading/reducer'
+import apiStatus from './apiStatus/reducer'
 import { saveState } from 'app/store/localStorage'
 
 const history = createHistory()
@@ -11,7 +11,7 @@ const history = createHistory()
 const appReducer = combineReducers({
   app,
   api,
-  loading,
+  apiStatus,
   router: connectRouter(history)
 })
 
