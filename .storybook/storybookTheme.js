@@ -37,6 +37,6 @@ export default create({
   inputBorderRadius: 6,
 
   brandTitle: 'Yawnch - Nova',
-  brandUrl: 'https://yawnch.com',
+  brandUrl: 'https://nova.yawnch.com',
   brandImage: logo,
 });
