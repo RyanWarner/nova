@@ -14,7 +14,7 @@ export const MobileMenuComponent = styled.div`
   border-radius: 8px;
   background-color: ${Colors.white060};
   backdrop-filter: blur(5px);
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
   display: none;
 
