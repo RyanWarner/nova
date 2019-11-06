@@ -18,10 +18,6 @@ const client = [
   new Dotenv({
     path: `${paths.dotenv}.${deployEnv}`
   }),
-  new webpack.DefinePlugin({
-    __SERVER__: 'false',
-    __BROWSER__: 'true'
-  }),
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/, /\.stories\./)
 ]
 
