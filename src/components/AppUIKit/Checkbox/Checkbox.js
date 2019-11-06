@@ -1,9 +1,10 @@
 import React from 'react'
 import { asField } from 'informed'
+import PropTypes from 'prop-types'
 
 import * as S from './styles'
 
-export default asField(({ fieldState, fieldApi, ...props }) => {
+const Checkbox = asField(({ fieldState, fieldApi, ...props }) => {
   const { value, error } = fieldState
   const { setValue, setTouched, setError } = fieldApi
   const { onChange, onBlur, defaultValue, forwardedRef, field, label, ...rest } = props
@@ -37,3 +38,20 @@ export default asField(({ fieldState, fieldApi, ...props }) => {
     </S.CheckboxComponent>
   )
 })
+
+const CheckboxWrap = props => <Checkbox {...props} />
+
+CheckboxWrap.propTypes = {
+  /** The name of the checkbox */
+  label: PropTypes.string,
+
+  /** onChange event */
+  onChange: PropTypes.func
+}
+
+CheckboxWrap.defaultProps = {
+  label: undefined,
+  onChange: undefined
+}
+
+export default CheckboxWrap
