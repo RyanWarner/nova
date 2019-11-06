@@ -1,0 +1,38 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import TextField from './TextField'
+import { Form } from 'informed'
+
+<Meta title='Components|UI Kit/TextField' component={TextField} />
+
+# TextField
+
+#### Default
+
+<Preview>
+  <Story name='Default'>
+    <Form>
+      <TextField
+        field='name'
+        label='Name'
+        placeholder='Your name here'
+      />
+    </Form>
+  </Story>
+</Preview>
+
+#### With error
+
+<Preview>
+  <Story name='With error'>
+    <Form>
+      <TextField
+        field='name'
+        label='Name'
+        placeholder='Your name here'
+        fieldState={{ error: 'Invalid '}}
+      />
+    </Form>
+  </Story>
+</Preview>
+
+<Props of={TextField} />
