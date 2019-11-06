@@ -40,7 +40,7 @@ By default, the template is setup to deploy to AWS S3. You'll need an AWS accoun
 1. Select "Use this bucket to host a website" and type in `index.html` for both the index and error documents. Click "save."
 1. Select the "Permissions" tab. Click "Bucket Policy."
 1. Past this bucket policy in the editor and be sure to replace `<bucket-name>` with your bucket's name:
-    ```
+    ```json
     {
         "Version": "2012-10-17",
         "Statement": [
