@@ -55,7 +55,7 @@ export const docsMap = {
     Icon: Sliders,
     pages: [
       'storybook',
-      'amplitude',
+      'analytics',
       'sentry',
       'plop'
     ]

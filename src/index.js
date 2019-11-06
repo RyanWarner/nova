@@ -38,7 +38,8 @@ store.subscribe(() => {
 })
 
 analytics.initialize().then(() => {
-  analytics.pageView({ pathname: browserHistory.location.pathname })
+  const { pathname } = browserHistory.location
+  analytics.pageView({ pathname })
 })
 
 const unlisten = browserHistory.listen((location, action) => { // eslint-disable-line no-unused-vars
