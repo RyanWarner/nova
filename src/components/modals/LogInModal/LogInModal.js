@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import * as S from './styles'
-import SignUpForm from '../../SignUpForm/SignUpForm'
+import LogInForm from '../../SignUpForm/SignUpForm'
 
 export default class LogInModal extends Component {
   render () {
@@ -11,7 +11,7 @@ export default class LogInModal extends Component {
         <S.Description>
           This is for demonstration purposes only. No information is stored.
         </S.Description>
-        <SignUpForm />
+        <LogInForm />
       </S.LogInModalComponent>
     )
   }

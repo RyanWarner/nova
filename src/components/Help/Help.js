@@ -17,7 +17,7 @@ export default class Help extends Component {
         </S.Features>
         <S.StyledHighlightLink
           text='Learn more'
-          url='https://yawnch.com'
+          href='https://yawnch.com/how-it-works'
           color='sea10'
         />
       </S.HelpComponent>
