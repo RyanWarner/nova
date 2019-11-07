@@ -28,7 +28,7 @@ export const DocsPage = styled.div`
 
   code {
     background-color: rgba(0, 0, 0, 0.11);
-    padding: 3px 6px;
+    padding: 2px 5px;
     border-radius: 4px;
     font-family: ${Type.monospace};
   }
