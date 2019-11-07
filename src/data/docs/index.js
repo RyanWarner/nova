@@ -44,8 +44,8 @@ export const docsMap = {
     id: 'state-and-api',
     Icon: Shield,
     pages: [
+      'api-patterns',
       'redux',
-      'api-middleware',
       'local-storage'
     ]
   },

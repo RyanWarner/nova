@@ -11,6 +11,7 @@ import routes from './routes/routes'
 import analytics from './analytics'
 import { loadState, saveState } from 'app/store/localStorage'
 import { ScrollToTop } from 'app/ui-kit'
+import Redux from 'app/api/redux'
 
 const dsn = process.env.SENTRY_DSN
 const environment = process.env.DEPLOY_ENV
@@ -36,6 +37,8 @@ store.subscribe(() => {
   }
   saveState(state)
 })
+
+Redux.store = store
 
 analytics.initialize().then(() => {
   const { pathname } = browserHistory.location
