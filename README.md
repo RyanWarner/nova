@@ -3,12 +3,15 @@
 Open source, feature rich React boilerplate used to kickstart production ready web apps.
 
 #### 🚀 Launch web apps faster
+
 #### ⭐ [Live Demo](https://nova.yawnch.com)
+
 #### 📖 [Storybook](https://yawnch.github.io/nova)
 
 ## Getting Started
 
 ### Install project dependencies
+
 - Requires [NodeJS](https://nodejs.org/en/) `>= 10`. [NVM](https://github.com/nvm-sh/nvm) is recommended.
 - `npm install`
 
@@ -25,7 +28,7 @@ Builds the app in development mode (using Webpack) and starts a local dev server
 Creates a new production build and deploys it to AWS S3.
 
 ```
-npm run deploy:development
+npm run deploy:develop
 npm run deploy:staging
 npm run deploy:production
 ```
