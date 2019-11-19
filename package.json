@@ -8,7 +8,7 @@
   "scripts": {
     "deploy:production": "npm run build:production && cross-env DEPLOY_ENV=production node scripts/deploy.js",
     "deploy:staging": "npm run build:staging && cross-env DEPLOY_ENV=staging node scripts/deploy.js",
-    "deploy:develop": "npm run build:develop && cross-env DEPLOY_ENV=develop node scripts/build.js",
+    "deploy:develop": "npm run build:develop && cross-env DEPLOY_ENV=develop node scripts/deploy.js",
     "build:production": "cross-env NODE_ENV=production DEPLOY_ENV=production node scripts/build.js",
     "build:staging": "cross-env NODE_ENV=production DEPLOY_ENV=staging node scripts/build.js",
     "build:develop": "cross-env NODE_ENV=production DEPLOY_ENV=develop node scripts/build.js",
