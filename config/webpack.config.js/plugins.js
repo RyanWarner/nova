@@ -5,7 +5,7 @@ const Dotenv = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-const deployEnv = process.env.DEPLOY_ENV || 'development'
+const deployEnv = process.env.DEPLOY_ENV || 'local'
 
 const shared = []
 

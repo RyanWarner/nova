@@ -15,13 +15,15 @@ Open source, feature rich React boilerplate used to kickstart production ready w
 - Requires [NodeJS](https://nodejs.org/en/) `>= 10`. [NVM](https://github.com/nvm-sh/nvm) is recommended.
 - `npm install`
 
-### Usage
-
-All important tasks are executed using NPM scripts. Take a look at `package.json` for a complete list. The most important scripts are detailed here.
+### Developing locally
 
 ### `npm start`
 
-Builds the app in development mode (using Webpack) and starts a local dev server at localhost:8080.
+Starts a local dev server at localhost:8080.
+
+### `npm run storybook`
+
+Starts a local Storybook server and opens in your browser.
 
 #### `npm run deploy:<env>`
 

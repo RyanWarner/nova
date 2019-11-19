@@ -7,7 +7,7 @@ const WebpackDevServer = require('webpack-dev-server')
 const start = async () => {
   rimraf.sync(paths.clientBuild)
 
-  const port = 8080
+  const port = process.env.PORT || 8080
   const host = 'localhost'
 
   webpackConfig.watch = true
