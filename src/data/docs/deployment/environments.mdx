@@ -4,7 +4,7 @@ export const meta = {
 
 # Environments
 
-For small teams, we recomend 4 environments. 1 local, and 3 deployment environments: `develop`, `staging`, and `production`.
+For small teams, we recommend 3-4 environments. 1 local, and 2-3 deployment environments: `develop` (optional), `staging`, and `production`. Depending on team size, it can be beneficial to have a deployed environment for QA (staging) that has some guaruntee of being functional, while also having a deployed environment (develop) for developers to deploy to and break without consequence.
 
 <br />
 
@@ -21,14 +21,18 @@ URL='nova.yawnch.com'
 S3_BUCKET='my-production-bucket'
 AWS_PROFILE='profile_name'
 
-AMPLITUDE_API_KEY=
-SENTRY_DSN=
+AMPLITUDE_API_KEY=''
+SENTRY_DSN=''
 ```
 
 | Variable | Description |
 |:---|:---|
+| `DEPLOY_ENV` | Used to determine which .env file should be used. |
+| `URL` | Used for the meta tag `og:url`. See `index.ejs`. |
 | `S3_BUCKET` | The name of the S3 bucket. Used only for deploys from your local machine. |
 | `AWS_PROFILE` | The name of your machine's local AWS profile. Used only for deploys from your local machine. |
+| `AMPLITUDE_API_KEY` | See the [Analytics docs](/docs/tooling/analytics) for setup instructions. |
+| `SENTRY_DSN` | See the [Sentry docs](/docs/tooling/sentry) for setup instructions. |
 
 ### Naming
 
