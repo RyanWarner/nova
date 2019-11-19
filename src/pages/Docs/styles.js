@@ -2,10 +2,16 @@ import styled from 'styled-components'
 
 import { Breakpoints, Colors, Sizes, Type } from 'app/styles'
 
+export const Wrap = styled.div`
+  padding: 80px 90px 50px 90px;
+  max-width: 900px;
+  box-sizing: border-box;
+`
+
 export const DocsPage = styled.div`
   margin-left: ${Sizes.sideNavWidth};
-  padding: 50px 90px;
-  max-width: 720px;
+  display: flex;
+  justify-content: center;
 
   @media(max-width: ${Breakpoints.main}) {
     margin-left: 0;
