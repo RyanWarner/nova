@@ -8,6 +8,12 @@ const build = async () => {
 
   webpack(webpackConfig, (error, stats) => {
     console.log('webpack', error, stats)
+
+    const info = stats.toJson()
+    if (stats.hasErrors()) {
+      console.error(info.errors[0])
+      process.exit(1)
+    }
   })
 }
 
