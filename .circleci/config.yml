@@ -37,6 +37,9 @@ jobs:
               if [ $CIRCLE_BRANCH = 'develop' ]; then
                 npm run build:develop
               fi
+              if [ $CIRCLE_BRANCH = 'dev' ]; then
+                npm run build:develop
+              fi
 
       - save_cache:
           paths:
