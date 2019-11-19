@@ -20,9 +20,11 @@ export default class Docs extends Component {
 
     return (
       <S.DocsPage>
-        <MDXProvider components={components}>
-          <MDXDocument />
-        </MDXProvider>
+        <S.Wrap>
+          <MDXProvider components={components}>
+            <MDXDocument />
+          </MDXProvider>
+        </S.Wrap>
       </S.DocsPage>
     )
   }
