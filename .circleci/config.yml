@@ -119,6 +119,7 @@ workflows:
                 - master
 
       - cypress/run:
+          start: "npm run start"
           requires:
             - build
           record: true

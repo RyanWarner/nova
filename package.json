@@ -23,7 +23,8 @@
     "build-storybook": "build-storybook -s .storybook/images",
     "deploy:storybook": "storybook-to-ghpages",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:run:ci": "npm-run-all --race start cy:run"
   },
   "moduleRoots": [
     "src",
