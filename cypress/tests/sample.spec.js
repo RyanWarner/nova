@@ -1,5 +1,6 @@
-describe('My First Test', () => {
-  it('Does not do much!', () => {
+describe('Cypress', () => {
+  it('is working', () => {
+    cy.visit('/')
     expect(true).to.equal(true)
   })
 })
