@@ -12,7 +12,7 @@ deploy_defaults: &deploy_defaults
     - image: circleci/python:3.7.2-stretch
   working_directory: ~/repo
 
-version: 2
+version: 2.18.02
 jobs:
   build:
     <<: *build_defaults
