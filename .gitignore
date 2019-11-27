@@ -27,6 +27,7 @@ jspm_packages
 # build files
 dist/
 storybook-static/
+cypress/videos/
 
 .DS_Store
 
