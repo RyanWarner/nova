@@ -1,6 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": ["standard", "standard-react"],
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:cypress/recommended"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "legacyDecorators": true
@@ -10,5 +14,7 @@
     "react/prop-types": "off",
     "react/no-did-update-set-state": "off"
   },
-  "env": { "jest": true }
+  "env": {
+    "jest": true
+  }
 }
