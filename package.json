@@ -22,7 +22,8 @@
     "storybook": "start-storybook -s .storybook/images",
     "build-storybook": "build-storybook -s .storybook/images",
     "deploy:storybook": "storybook-to-ghpages",
-    "cypress:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "moduleRoots": [
     "src",
@@ -98,7 +99,7 @@
     "eslint-config-standard-react": "9.2.0",
     "eslint-loader": "3.0.2",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-cypress": "2.7.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-node": "10.0.0",
     "eslint-plugin-promise": "4.2.1",
@@ -110,6 +111,7 @@
     "html-webpack-plugin": "3.2.0",
     "image-webpack-loader": "6.0.0",
     "jest": "24.9.0",
+    "npm-run-all": "4.1.5",
     "plop": "2.5.3",
     "react-dev-utils": "9.1.0",
     "regenerator-runtime": "0.13.3",
