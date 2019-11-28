@@ -1,5 +1,4 @@
 export Home from './Home/Home'
 export Privacy from './Privacy/Privacy'
 export NotFound from './NotFound/NotFound'
-export Faq from './Faq/Faq'
 export Docs from './Docs/Docs'

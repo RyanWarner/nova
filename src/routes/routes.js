@@ -1,5 +1,5 @@
 import { Root, AppRoot } from 'app/components'
-import { Home, Faq, Privacy, NotFound } from 'app/pages'
+import { Home, Privacy, NotFound } from 'app/pages'
 import docsRoutes from './docs.routes'
 
 export default [{
@@ -16,14 +16,6 @@ export default [{
         meta: {
           title: 'Nova',
           description: 'An opinionated starting point for web applications.'
-        }
-      }, {
-        path: '/faq',
-        exact: true,
-        component: Faq,
-        meta: {
-          title: 'Nova - FAQ',
-          description: 'Frequently asked questions'
         }
       }, {
         path: '/privacy',
