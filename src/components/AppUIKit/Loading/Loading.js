@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import * as S from './styles'
 
-export default class Loading extends Component {
-  render () {
-    return <S.Wrap><S.StyledSpinner /></S.Wrap>
-  }
-}
+export default () =>
+  <S.LoadingComponent>
+    <S.StyledSpinner />
+  </S.LoadingComponent>
