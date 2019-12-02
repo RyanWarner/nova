@@ -5,6 +5,9 @@ import * as S from './styles'
 import { openModal } from 'app/store/app/actions'
 import { Wordmark, NavLinks } from '../'
 
+// import * as Components from '../'
+// console.log('Components', Components)
+
 @connect(null, { openModal })
 export default class Nav extends Component {
   handleSignUp = () => {

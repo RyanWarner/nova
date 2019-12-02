@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import * as S from './styles'
 
-export default (WrappedComponent) => {
+export default WrappedComponent => {
   return class HOC extends Component {
     state = {}
 

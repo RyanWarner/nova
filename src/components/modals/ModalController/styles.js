@@ -1,61 +1,22 @@
-import styled, { css, createGlobalStyle } from 'styled-components'
-import { X } from 'react-feather'
+import styled, { createGlobalStyle } from 'styled-components'
 
-import { Sizes } from 'app/styles'
+import { Colors } from 'app/styles'
 
 export const OverlayWrap = styled.div``
-export const CloseX = styled(X)`
-  padding: 25px;
-  right: 0;
-  position: absolute;
-  top: 0%;
-  cursor: pointer;
-  z-index: 2;
-  opacity: 0.5;
-  transition: opacity 200ms ease;
-
-  &:hover {
-    opacity: 0.7;
-  }
-`
 
 export const GlobalModalStyle = createGlobalStyle`
   .Aria-modal {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
-    transition: all 250ms ease-in-out;
-    transform: translate3d(0, -50px, 0);
+    background-color: ${Colors.black};
+    border-radius: 4px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35), 0px 2px 20px rgba(0, 0, 0, 0.35);
+    transition: opacity 300ms ease, transform 300ms ease;
+    transform: translate(0, -50px);
     opacity: 0.3;
 
     &.has-entered {
       opacity: 1;
-      transform: translate3d(0, 0, 0);
+      transform: translate(0, 0px);
     }
-
-    ${props => props.animation === 'fadeScale' && css`
-      transform: scale(0.8);
-      opacity: 0;
-
-      &.has-entered {
-        opacity: 1;
-        transform: scale(1);
-      }
-    `}
-
-    ${props => props.animation === 'sideNav' && css`
-      transform: translate3d(${Sizes.sideNavWidth}, 0, 0);
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      right: 0;
-      border-radius: 10px 0 0 10px;
-
-      &.has-entered {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
-    `}
   }
 
   .Aria-underlay {
@@ -70,8 +31,10 @@ export const GlobalModalStyle = createGlobalStyle`
   }
 `
 
-export const sideNavUnderlayStyle = {
-  textAlign: 'right',
-  padding: 0,
-  overflow: 'initial'
-}
+export const CloseX = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+`
