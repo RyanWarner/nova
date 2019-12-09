@@ -38,5 +38,5 @@ export default create({
 
   brandTitle: 'Yawnch - Nova',
   brandUrl: 'https://nova.yawnch.com',
-  brandImage: logo,
-});
+  brandImage: logo
+})
