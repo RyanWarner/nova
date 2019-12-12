@@ -40,7 +40,7 @@ const cssLoader = {
 }
 
 const fileLoader = {
-  exclude: [/\.(js|css|ejs|html|json)$/],
+  exclude: [/\.(js|jsx|ts|tsx|css|mjs|html|ejs|json)$/],
   use: [
     {
       loader: require.resolve('file-loader'),
