@@ -83,8 +83,8 @@ export default {
     icon: <Aws />
   },
   cypress: {
-    display: 'Testing',
-    description: 'Coming soon!',
+    display: 'Cypress',
+    description: 'End-to-end testing',
     url: '/docs',
     icon: <Cypress />,
     comingSoon: true
