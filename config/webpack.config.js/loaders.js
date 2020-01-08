@@ -6,7 +6,9 @@ const babelLoader = {
   loader: 'babel-loader'
 }
 
-const ASSET_PATH = process.env.NODE_ENV === 'production' ? paths.cdn : paths.publicPath
+const ASSET_PATH = process.env.NODE_ENV === 'production'
+  ? paths.cdn
+  : paths.publicPath
 
 const urlLoaderConfig = (emitFile) => ({
   loader: require.resolve('url-loader'),
@@ -30,7 +32,7 @@ const imageLoaderConfig = {
 }
 
 const urlLoader = {
-  test: /\.(png|jpe?g|gif|svg|ttf|otf|eot|woff|woff2)$/,
+  test: /\.(webp|png|jpe?g|gif|svg|ttf|otf|eot|woff|woff2)$/,
   use: [urlLoaderConfig(true)]
 }
 
