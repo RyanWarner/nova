@@ -57,7 +57,7 @@
     "redux": "4.0.5",
     "redux-logger": "3.0.6",
     "redux-thunk": "2.3.0",
-    "styled-components": "5.0.0"
+    "styled-components": "5.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",
@@ -82,12 +82,12 @@
     "babel-jest": "25.1.0",
     "babel-loader": "8.0.6",
     "babel-plugin-lodash": "3.3.4",
-    "babel-plugin-named-asset-import": "0.3.5",
-    "babel-plugin-styled-components": "1.10.6",
+    "babel-plugin-named-asset-import": "0.3.6",
+    "babel-plugin-styled-components": "1.10.7",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "chalk": "3.0.0",
     "core-js": "3.6.4",
-    "cross-env": "6.0.3",
+    "cross-env": "7.0.0",
     "css-loader": "3.4.2",
     "cypress": "3.8.2",
     "dotenv-webpack": "1.7.0",
@@ -96,7 +96,7 @@
     "eslint-config-standard-react": "9.2.0",
     "eslint-loader": "3.0.3",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-cypress": "2.8.1",
+    "eslint-plugin-cypress": "2.9.0",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-node": "11.0.0",
     "eslint-plugin-promise": "4.2.1",
@@ -118,7 +118,7 @@
     "webpack": "4.41.5",
     "webpack-bundle-analyzer": "3.6.0",
     "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.10.2",
+    "webpack-dev-server": "3.10.3",
     "webpack-node-externals": "1.7.2",
     "write-file-webpack-plugin": "4.5.1"
   }
