@@ -5,7 +5,7 @@ import * as S from './styles'
 import SideNav from '../SideNav/SideNav'
 import MobileMenu from '../MobileMenu/MobileMenu'
 
-export default class AppRoot extends Component {
+export default class DocsRoot extends Component {
   render () {
     const { route } = this.props
     return (
