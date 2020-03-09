@@ -13,6 +13,7 @@ export default asField(({ fieldState, fieldApi, ...props }) => {
       {props.label && <S.Label htmlFor={props.field}>{props.label}</S.Label>}
       <S.TextArea
         fieldState={fieldState}
+        ref={forwardedRef}
         {...rest}
         value={value}
         onChange={e => {
