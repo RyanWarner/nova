@@ -4,7 +4,7 @@ import { asField } from 'informed'
 import * as S from './styles'
 
 export default asField(({ fieldState, fieldApi, ...props }) => {
-  const { value, error } = fieldState
+  const { maskedValue, error } = fieldState
   const { setValue, setTouched } = fieldApi
   const { onChange, onBlur, defaultValue, forwardedRef, ...rest } = props
 
@@ -12,12 +12,12 @@ export default asField(({ fieldState, fieldApi, ...props }) => {
     <S.TextAreaComponent>
       {props.label && <S.Label htmlFor={props.field}>{props.label}</S.Label>}
       <S.TextArea
+        {...rest}
         fieldState={fieldState}
         ref={forwardedRef}
-        {...rest}
-        value={value}
+        value={!maskedValue ? '' : maskedValue}
         onChange={e => {
-          setValue(e.target.value)
+          setValue(e.target.value, e)
           if (onChange) { onChange(e.target.value) }
         }}
         onBlur={e => {
