@@ -1,14 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import * as S from './styles'
 import SideNav from '../../SideNav/SideNav'
 
-export default class SideNavModal extends Component {
-  render () {
-    return (
-      <S.SideNavModalComponent>
-        <SideNav options={{ mobile: true }} />
-      </S.SideNavModalComponent>
-    )
-  }
-}
+export default () =>
+  <S.SideNavModalComponent>
+    <SideNav options={{ mobile: true }} />
+  </S.SideNavModalComponent>
