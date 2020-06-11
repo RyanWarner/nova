@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Colors } from 'app/styles'
 import FeatureCard from '../FeatureCard/FeatureCard'
 import HighlightLink from '../HighlightLink/HighlightLink'
+import { SlackLogo } from 'app/ui-kit/Icons'
 
 export const HelpComponent = styled.div`
   width: 100vw;
@@ -12,6 +13,10 @@ export const HelpComponent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+
+export const TwitterLogo = styled(SlackLogo)`
+  width: 24px;
 `
 
 export const Title = styled.h2`

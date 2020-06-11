@@ -7,21 +7,11 @@ export default {
   1: {
     display: 'GitHub',
     type: 'a',
-    url: 'https://github.com/yawnch/nova'
+    url: 'https://github.com/RyanWarner/nova'
   },
   3: {
     display: 'Boilerplates',
     type: 'a',
-    url: 'https://yawnch.com/boilerplates'
-  },
-  4: {
-    display: 'Courses',
-    type: 'a',
-    url: 'https://yawnch.com/courses'
-  },
-  5: {
-    display: 'Community',
-    type: 'a',
-    url: 'https://yawnch.com/community'
+    url: 'https://ryan.warner.codes/boilerplates'
   }
 }

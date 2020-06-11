@@ -1,12 +1,12 @@
 import React from 'react'
 
 import * as S from './styles'
-import MadeByYawnch from '../MadeByYawnch/MadeByYawnch'
+import MadeBy from '../MadeBy/MadeBy'
 
 export default () =>
   <S.FooterComponent>
     <S.MaxWidth>
-      <MadeByYawnch />
+      <MadeBy />
       <S.StyledNavLinks />
       <S.Copyright
         href='https://opensource.org/licenses/MIT'

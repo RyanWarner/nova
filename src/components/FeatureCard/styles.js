@@ -5,11 +5,11 @@ import { Breakpoints, Colors, Type } from 'app/styles'
 export const FeatureCardComponent = styled.div`
   background-color: ${Colors.gray40};
   border-radius: 6px;
-  width: 184px;
   height: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 
   @media(max-width: ${Breakpoints.main}) {
     width: 164px;

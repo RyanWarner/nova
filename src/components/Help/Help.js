@@ -1,21 +1,16 @@
 import React from 'react'
 
 import * as S from './styles'
-import { SlackLogo, VideoPlayer } from 'app/ui-kit/Icons'
 
 export default () =>
   <S.HelpComponent>
     <S.Title>Need help?</S.Title>
     <S.Description>
-      Purchase a community subscription and unlock unlimited access to
+      Reach out to me on Twitter
     </S.Description>
     <S.Features>
-      <S.StyledFeatureCard title='Live chat' icon={<SlackLogo />} />
-      <S.StyledFeatureCard title='Courses' icon={<VideoPlayer />} />
+      <a href='https://twitter.com/RyanWarnerCodes'>
+        <S.StyledFeatureCard title='@RyanWarnerCodes' icon={<S.TwitterLogo />} />
+      </a>
     </S.Features>
-    <S.StyledHighlightLink
-      text='Learn more'
-      href='https://yawnch.com/how-it-works'
-      color='sea10'
-    />
   </S.HelpComponent>

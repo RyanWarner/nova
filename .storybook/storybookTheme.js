@@ -36,7 +36,7 @@ export default create({
   inputTextColor: Colors.gray10,
   inputBorderRadius: 6,
 
-  brandTitle: 'Yawnch - Nova',
-  brandUrl: 'https://nova.yawnch.com',
+  brandTitle: 'Nova',
+  brandUrl: 'https://nova.ryan.warner.codes',
   brandImage: logo
 })

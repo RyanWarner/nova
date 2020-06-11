@@ -2,11 +2,9 @@
 
 Open source, feature rich React boilerplate used to kickstart production ready web apps.
 
-#### 🚀 Launch web apps faster with [Yawnch](https://yawnch.com)
+#### ⭐ [Live Demo](https://nova.warner.codes)
 
-#### ⭐ [Live Demo](https://nova.yawnch.com)
-
-#### 📖 [Storybook](https://yawnch.github.io/nova)
+#### 📖 [Storybook](https://ryanwarner.github.io/nova)
 
 ## Getting Started
 
