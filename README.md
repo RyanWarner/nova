@@ -31,7 +31,7 @@ CircleCI is configured to deploy to different environments based on changes to k
 
 | Branch Name | Environment |
 |:---|:---|
-| `master` | production |
+| `production` | production |
 | `staging` | staging |
 | `dev`, `develop` | dev |
 

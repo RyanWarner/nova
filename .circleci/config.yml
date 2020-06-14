@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Build
           command: |
-              if [ $CIRCLE_BRANCH = 'master' ]; then
+              if [ $CIRCLE_BRANCH = 'production' ]; then
                 npm run build:production
               fi
               if [ $CIRCLE_BRANCH = 'staging' ]; then
@@ -116,7 +116,7 @@ workflows:
               only:
                 - develop
                 - staging
-                - master
+                - production
 
       - cypress/run:
           start: "npm run start"
@@ -141,4 +141,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: production
